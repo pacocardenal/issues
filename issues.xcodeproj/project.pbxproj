@@ -12,6 +12,11 @@
 		F8361DE02716CB6E0067D3CF /* IssuesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DDF2716CB6E0067D3CF /* IssuesListViewController.swift */; };
 		F8361DE52716CB6F0067D3CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8361DE42716CB6F0067D3CF /* Assets.xcassets */; };
 		F8361DE82716CB6F0067D3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8361DE62716CB6F0067D3CF /* LaunchScreen.storyboard */; };
+		F8361DF02716D1BA0067D3CF /* ISBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DEF2716D1BA0067D3CF /* ISBodyLabel.swift */; };
+		F8361DF22716D1FA0067D3CF /* ISButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DF12716D1FA0067D3CF /* ISButton.swift */; };
+		F8361DF42716D2270067D3CF /* ISTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DF32716D2270067D3CF /* ISTitleLabel.swift */; };
+		F8361DF62716D2590067D3CF /* ISAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DF52716D2590067D3CF /* ISAlertViewController.swift */; };
+		F8361DF82716D2E00067D3CF /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DF72716D2E00067D3CF /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		F8361DE42716CB6F0067D3CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8361DE72716CB6F0067D3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8361DE92716CB6F0067D3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8361DEF2716D1BA0067D3CF /* ISBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISBodyLabel.swift; sourceTree = "<group>"; };
+		F8361DF12716D1FA0067D3CF /* ISButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISButton.swift; sourceTree = "<group>"; };
+		F8361DF32716D2270067D3CF /* ISTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISTitleLabel.swift; sourceTree = "<group>"; };
+		F8361DF52716D2590067D3CF /* ISAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISAlertViewController.swift; sourceTree = "<group>"; };
+		F8361DF72716D2E00067D3CF /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 				F8361DE42716CB6F0067D3CF /* Assets.xcassets */,
 				F8361DE62716CB6F0067D3CF /* LaunchScreen.storyboard */,
 				F8361DE92716CB6F0067D3CF /* Info.plist */,
+				F8361DEF2716D1BA0067D3CF /* ISBodyLabel.swift */,
+				F8361DF12716D1FA0067D3CF /* ISButton.swift */,
+				F8361DF32716D2270067D3CF /* ISTitleLabel.swift */,
+				F8361DF52716D2590067D3CF /* ISAlertViewController.swift */,
+				F8361DF72716D2E00067D3CF /* UIViewController+Ext.swift */,
 			);
 			path = issues;
 			sourceTree = "<group>";
@@ -133,8 +148,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8361DF62716D2590067D3CF /* ISAlertViewController.swift in Sources */,
+				F8361DF22716D1FA0067D3CF /* ISButton.swift in Sources */,
 				F8361DE02716CB6E0067D3CF /* IssuesListViewController.swift in Sources */,
 				F8361DDC2716CB6E0067D3CF /* AppDelegate.swift in Sources */,
+				F8361DF42716D2270067D3CF /* ISTitleLabel.swift in Sources */,
+				F8361DF02716D1BA0067D3CF /* ISBodyLabel.swift in Sources */,
+				F8361DF82716D2E00067D3CF /* UIViewController+Ext.swift in Sources */,
 				F8361DDE2716CB6E0067D3CF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
