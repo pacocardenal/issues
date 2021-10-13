@@ -7,11 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class IssuesListViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .systemPink
+    view.backgroundColor = .systemBackground
+    navigationController?.navigationBar.prefersLargeTitles = true
   }
 
 }
