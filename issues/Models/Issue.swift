@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Issue {
+struct Issue: Hashable {
+  let _id: String?
   let firstName: String?
   let lastName: String?
   let issueCount: Int?
@@ -20,6 +21,7 @@ struct Issue {
     self.lastName = row[1]
     self.issueCount = issues
     self.dateOfBirth = row[3]
+    self._id = nil
   }
 }
 

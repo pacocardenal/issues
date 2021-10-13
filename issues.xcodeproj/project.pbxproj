@@ -21,6 +21,8 @@
 		F8361E022716D6CE0067D3CF /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E012716D6CE0067D3CF /* FileManager.swift */; };
 		F8361E052716D7340067D3CF /* ISError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E042716D7340067D3CF /* ISError.swift */; };
 		F8361E0727171EFF0067D3CF /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = F8361E0627171EFF0067D3CF /* issues.csv */; };
+		F8361E09271731B80067D3CF /* ISIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E08271731B80067D3CF /* ISIconImageView.swift */; };
+		F8361E0C271732D30067D3CF /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E0B271732D30067D3CF /* IssueCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F8361E012716D6CE0067D3CF /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		F8361E042716D7340067D3CF /* ISError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISError.swift; sourceTree = "<group>"; };
 		F8361E0627171EFF0067D3CF /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
+		F8361E08271731B80067D3CF /* ISIconImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISIconImageView.swift; sourceTree = "<group>"; };
+		F8361E0B271732D30067D3CF /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +101,12 @@
 		F8361DFA2716D3A20067D3CF /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				F8361E0A271732B40067D3CF /* Cells */,
 				F8361DEF2716D1BA0067D3CF /* ISBodyLabel.swift */,
 				F8361DF12716D1FA0067D3CF /* ISButton.swift */,
 				F8361DF32716D2270067D3CF /* ISTitleLabel.swift */,
 				F8361DF52716D2590067D3CF /* ISAlertViewController.swift */,
+				F8361E08271731B80067D3CF /* ISIconImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -145,6 +151,14 @@
 				F8361E042716D7340067D3CF /* ISError.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F8361E0A271732B40067D3CF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F8361E0B271732D30067D3CF /* IssueCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,12 +234,14 @@
 				F8361E052716D7340067D3CF /* ISError.swift in Sources */,
 				F8361DF62716D2590067D3CF /* ISAlertViewController.swift in Sources */,
 				F8361DF22716D1FA0067D3CF /* ISButton.swift in Sources */,
+				F8361E09271731B80067D3CF /* ISIconImageView.swift in Sources */,
 				F8361DE02716CB6E0067D3CF /* IssuesListViewController.swift in Sources */,
 				F8361DDC2716CB6E0067D3CF /* AppDelegate.swift in Sources */,
 				F8361DF42716D2270067D3CF /* ISTitleLabel.swift in Sources */,
 				F8361E022716D6CE0067D3CF /* FileManager.swift in Sources */,
 				F8361DF02716D1BA0067D3CF /* ISBodyLabel.swift in Sources */,
 				F8361DF82716D2E00067D3CF /* UIViewController+Ext.swift in Sources */,
+				F8361E0C271732D30067D3CF /* IssueCell.swift in Sources */,
 				F8361DDE2716CB6E0067D3CF /* SceneDelegate.swift in Sources */,
 				F8361DFF2716D4B80067D3CF /* Issue.swift in Sources */,
 			);
