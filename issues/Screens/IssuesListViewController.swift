@@ -13,7 +13,18 @@ class IssuesListViewController: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = .systemBackground
     navigationController?.navigationBar.prefersLargeTitles = true
-    presentBAAlertOnMainThread(title: "Alert Test", message: "It seems that the custom alert is working fine 🙂", buttonTitle: "Ok!")
+    
+    FileManager.shared.getIssues { result in
+      switch result {
+      case .success(let issues):
+        print("Issues count: \(issues.count)")
+        print(issues)
+      case .failure(let error):
+        self.presentISAlertOnMainThread(title: "Bad stuff happened",
+                                        message: error.rawValue,
+                                        buttonTitle: "Ok")
+      }
+    }
   }
   
 }

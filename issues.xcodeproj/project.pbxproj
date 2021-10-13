@@ -17,6 +17,9 @@
 		F8361DF42716D2270067D3CF /* ISTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DF32716D2270067D3CF /* ISTitleLabel.swift */; };
 		F8361DF62716D2590067D3CF /* ISAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DF52716D2590067D3CF /* ISAlertViewController.swift */; };
 		F8361DF82716D2E00067D3CF /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DF72716D2E00067D3CF /* UIViewController+Ext.swift */; };
+		F8361DFF2716D4B80067D3CF /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DFE2716D4B80067D3CF /* Issue.swift */; };
+		F8361E022716D6CE0067D3CF /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E012716D6CE0067D3CF /* FileManager.swift */; };
+		F8361E052716D7340067D3CF /* ISError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E042716D7340067D3CF /* ISError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		F8361DF32716D2270067D3CF /* ISTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISTitleLabel.swift; sourceTree = "<group>"; };
 		F8361DF52716D2590067D3CF /* ISAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISAlertViewController.swift; sourceTree = "<group>"; };
 		F8361DF72716D2E00067D3CF /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		F8361DFE2716D4B80067D3CF /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		F8361E012716D6CE0067D3CF /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		F8361E042716D7340067D3CF /* ISError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +73,11 @@
 				F8361DDB2716CB6E0067D3CF /* AppDelegate.swift */,
 				F8361DDD2716CB6E0067D3CF /* SceneDelegate.swift */,
 				F8361DE92716CB6F0067D3CF /* Info.plist */,
+				F8361DFD2716D4A40067D3CF /* Models */,
+				F8361E002716D6BD0067D3CF /* Managers */,
 				F8361DF92716D3940067D3CF /* Screens */,
 				F8361DFA2716D3A20067D3CF /* Custom Views */,
+				F8361E032716D7180067D3CF /* Utilities */,
 				F8361DFB2716D3AC0067D3CF /* Extensions */,
 				F8361DFC2716D3B80067D3CF /* Support */,
 			);
@@ -109,6 +118,30 @@
 				F8361DE62716CB6F0067D3CF /* LaunchScreen.storyboard */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		F8361DFD2716D4A40067D3CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8361DFE2716D4B80067D3CF /* Issue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F8361E002716D6BD0067D3CF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F8361E012716D6CE0067D3CF /* FileManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F8361E032716D7180067D3CF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F8361E042716D7340067D3CF /* ISError.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,14 +213,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8361E052716D7340067D3CF /* ISError.swift in Sources */,
 				F8361DF62716D2590067D3CF /* ISAlertViewController.swift in Sources */,
 				F8361DF22716D1FA0067D3CF /* ISButton.swift in Sources */,
 				F8361DE02716CB6E0067D3CF /* IssuesListViewController.swift in Sources */,
 				F8361DDC2716CB6E0067D3CF /* AppDelegate.swift in Sources */,
 				F8361DF42716D2270067D3CF /* ISTitleLabel.swift in Sources */,
+				F8361E022716D6CE0067D3CF /* FileManager.swift in Sources */,
 				F8361DF02716D1BA0067D3CF /* ISBodyLabel.swift in Sources */,
 				F8361DF82716D2E00067D3CF /* UIViewController+Ext.swift in Sources */,
 				F8361DDE2716CB6E0067D3CF /* SceneDelegate.swift in Sources */,
+				F8361DFF2716D4B80067D3CF /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
