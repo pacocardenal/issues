@@ -66,17 +66,49 @@
 			children = (
 				F8361DDB2716CB6E0067D3CF /* AppDelegate.swift */,
 				F8361DDD2716CB6E0067D3CF /* SceneDelegate.swift */,
-				F8361DDF2716CB6E0067D3CF /* IssuesListViewController.swift */,
-				F8361DE42716CB6F0067D3CF /* Assets.xcassets */,
-				F8361DE62716CB6F0067D3CF /* LaunchScreen.storyboard */,
 				F8361DE92716CB6F0067D3CF /* Info.plist */,
+				F8361DF92716D3940067D3CF /* Screens */,
+				F8361DFA2716D3A20067D3CF /* Custom Views */,
+				F8361DFB2716D3AC0067D3CF /* Extensions */,
+				F8361DFC2716D3B80067D3CF /* Support */,
+			);
+			path = issues;
+			sourceTree = "<group>";
+		};
+		F8361DF92716D3940067D3CF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F8361DDF2716CB6E0067D3CF /* IssuesListViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F8361DFA2716D3A20067D3CF /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
 				F8361DEF2716D1BA0067D3CF /* ISBodyLabel.swift */,
 				F8361DF12716D1FA0067D3CF /* ISButton.swift */,
 				F8361DF32716D2270067D3CF /* ISTitleLabel.swift */,
 				F8361DF52716D2590067D3CF /* ISAlertViewController.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		F8361DFB2716D3AC0067D3CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 				F8361DF72716D2E00067D3CF /* UIViewController+Ext.swift */,
 			);
-			path = issues;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F8361DFC2716D3B80067D3CF /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F8361DE42716CB6F0067D3CF /* Assets.xcassets */,
+				F8361DE62716CB6F0067D3CF /* LaunchScreen.storyboard */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
