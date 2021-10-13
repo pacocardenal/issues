@@ -10,19 +10,50 @@ import Foundation
 class FileManager {
   
   static let shared = FileManager()
-  private let mockIssues = [
-    Issue(firstName: "First name 1",
-          lastName: "Last name 1",
-          issueCount: 1,
-          dateOfBirth: "1111-11-11T11:11:11"),
-    Issue(firstName: "First name 2",
-          lastName: "Last name 2",
-          issueCount: 2,
-          dateOfBirth: "2222-22-22T22:22:22"),
-  ]
   
   func getIssues(completed: @escaping(Result<[Issue], ISError>) -> Void) {
-    completed(.success(mockIssues))
+    guard let filepath = Bundle.main.path(forResource: "issues", ofType: "csv") else {
+      completed(.failure(.invalidFile))
+      return
+    }
+    
+    var issues = [Issue]()
+    do {
+      let contents = try String(contentsOfFile: filepath, encoding: .utf8)
+      let csvRows = readCsv(data: contents)
+      for row in csvRows {
+        if let issue = Issue(row: row) {
+          issues.append(issue)
+        }
+      }
+      completed(.success(issues))
+    } catch {
+      completed(.failure(.invalidData))
+    }
+    
+  }
+  
+  private func readCsv(data: String) -> [[String]] {
+    var result: [[String]] = []
+    let cleanData = cleanRows(file: data)
+    
+    let rows = cleanData.components(separatedBy: "\n")
+    for row in rows {
+      let columns = row.components(separatedBy: ",")
+      result.append(columns)
+    }
+    
+    return result
+  }
+  
+  private func cleanRows(file: String) -> String {
+    var cleanFile = file
+    
+    cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
+    cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
+    cleanFile = cleanFile.replacingOccurrences(of: "\"", with: "")
+    
+    return cleanFile
   }
   
 }
