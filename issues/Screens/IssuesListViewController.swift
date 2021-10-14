@@ -105,7 +105,7 @@ extension IssuesListViewController: UISearchBarDelegate, UISearchResultsUpdating
   func updateSearchResults(for searchController: UISearchController) {
        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
 
-       filteredIssues = issues.filter { $0.firstName?.lowercased().contains(filter.lowercased()) ?? false }
+       filteredIssues = issues.filter { $0.fullName?.lowercased().contains(filter.lowercased()) ?? false }
        updateData(on: filteredIssues)
    }
 

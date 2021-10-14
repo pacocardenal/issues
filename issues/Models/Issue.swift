@@ -14,6 +14,10 @@ struct Issue: Hashable {
   let issueCount: Int?
   let dateOfBirth: String?
   
+  var fullName: String? {
+    "\(firstName ?? "") \(lastName ?? "")"
+  }
+  
   init?(row : [String]) {
     guard row.count == 4, let issues = Int(row[2]) else { return nil }
     
