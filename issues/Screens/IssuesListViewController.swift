@@ -65,9 +65,11 @@ final class IssuesListViewController: UIViewController {
   }
   
   private func getIssues() {
+    showLoadingView()
     FileManager.shared.getIssues { [weak self] result in
       guard let self = self else { return }
       
+      self.dismissLoadingView()
       switch result {
       case .success(let issues):
         self.issues = issues
