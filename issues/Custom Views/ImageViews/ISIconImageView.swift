@@ -9,7 +9,7 @@ import UIKit
 
 class ISIconImageView: UIImageView {
   
-  var placeHolderImage = UIImage(systemName: "ant.circle")?.withRenderingMode(.alwaysTemplate)
+  var placeHolderImage = UIImage(systemName: SFSymbols.issuePlaceholder)?.withRenderingMode(.alwaysTemplate)
   
   override init(frame: CGRect) {
     super.init(frame: frame)

@@ -25,6 +25,7 @@
 		F8361E0C271732D30067D3CF /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E0B271732D30067D3CF /* IssueCell.swift */; };
 		F8D217D5271845470007F07D /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D217D4271845470007F07D /* UIHelper.swift */; };
 		F8D217DC27184A670007F07D /* ISEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D217DB27184A670007F07D /* ISEmptyStateView.swift */; };
+		F8D217DE27184B980007F07D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D217DD27184B980007F07D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F8361E0B271732D30067D3CF /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
 		F8D217D4271845470007F07D /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		F8D217DB27184A670007F07D /* ISEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISEmptyStateView.swift; sourceTree = "<group>"; };
+		F8D217DD27184B980007F07D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				F8361E042716D7340067D3CF /* ISError.swift */,
 				F8D217D4271845470007F07D /* UIHelper.swift */,
+				F8D217DD27184B980007F07D /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				F8361DE02716CB6E0067D3CF /* IssuesListViewController.swift in Sources */,
 				F8361DDC2716CB6E0067D3CF /* AppDelegate.swift in Sources */,
 				F8361DF42716D2270067D3CF /* ISTitleLabel.swift in Sources */,
+				F8D217DE27184B980007F07D /* Constants.swift in Sources */,
 				F8361E022716D6CE0067D3CF /* FileManager.swift in Sources */,
 				F8361DF02716D1BA0067D3CF /* ISBodyLabel.swift in Sources */,
 				F8361DF82716D2E00067D3CF /* UIViewController+Ext.swift in Sources */,

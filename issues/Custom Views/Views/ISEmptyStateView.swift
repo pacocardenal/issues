@@ -34,7 +34,7 @@ class ISEmptyStateView: UIView {
     messageLabel.numberOfLines = 3
     messageLabel.textColor = .secondaryLabel
     
-    logoImageView.image = UIImage(systemName: "exclamationmark.triangle")?.withRenderingMode(.alwaysTemplate)
+    logoImageView.image = UIImage(systemName: SFSymbols.issueListEmptyView)?.withRenderingMode(.alwaysTemplate)
     logoImageView.tintColor = .systemGray
     
     NSLayoutConstraint.activate([
