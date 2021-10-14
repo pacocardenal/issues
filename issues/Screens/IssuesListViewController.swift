@@ -73,6 +73,14 @@ final class IssuesListViewController: UIViewController {
       switch result {
       case .success(let issues):
         self.issues = issues
+        self.issues.removeAll()
+        if self.issues.isEmpty {
+          let message = "The datasource doesn't have any issues 🥲"
+          DispatchQueue.main.async {
+            self.showEmptyState(with: message, in: self.view)
+          }
+          return
+        }
         self.updateData()
       case .failure(let error):
         self.presentISAlertOnMainThread(title: "Bad stuff happened", message: error.rawValue, buttonTitle: "Ok")

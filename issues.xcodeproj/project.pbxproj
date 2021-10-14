@@ -24,6 +24,7 @@
 		F8361E09271731B80067D3CF /* ISIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E08271731B80067D3CF /* ISIconImageView.swift */; };
 		F8361E0C271732D30067D3CF /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E0B271732D30067D3CF /* IssueCell.swift */; };
 		F8D217D5271845470007F07D /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D217D4271845470007F07D /* UIHelper.swift */; };
+		F8D217DC27184A670007F07D /* ISEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D217DB27184A670007F07D /* ISEmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		F8361E08271731B80067D3CF /* ISIconImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISIconImageView.swift; sourceTree = "<group>"; };
 		F8361E0B271732D30067D3CF /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
 		F8D217D4271845470007F07D /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		F8D217DB27184A670007F07D /* ISEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISEmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				F8361E0A271732B40067D3CF /* Cells */,
-				F8361DEF2716D1BA0067D3CF /* ISBodyLabel.swift */,
-				F8361DF12716D1FA0067D3CF /* ISButton.swift */,
-				F8361DF32716D2270067D3CF /* ISTitleLabel.swift */,
-				F8361DF52716D2590067D3CF /* ISAlertViewController.swift */,
-				F8361E08271731B80067D3CF /* ISIconImageView.swift */,
+				F8D217D627184A100007F07D /* Labels */,
+				F8D217D727184A160007F07D /* Buttons */,
+				F8D217D827184A210007F07D /* ImageViews */,
+				F8D217DA27184A450007F07D /* Views */,
+				F8D217D927184A280007F07D /* ViewControllers */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -162,6 +164,47 @@
 				F8361E0B271732D30067D3CF /* IssueCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F8D217D627184A100007F07D /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				F8361DEF2716D1BA0067D3CF /* ISBodyLabel.swift */,
+				F8361DF32716D2270067D3CF /* ISTitleLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		F8D217D727184A160007F07D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				F8361DF12716D1FA0067D3CF /* ISButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		F8D217D827184A210007F07D /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				F8361E08271731B80067D3CF /* ISIconImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		F8D217D927184A280007F07D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8361DF52716D2590067D3CF /* ISAlertViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F8D217DA27184A450007F07D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8D217DB27184A670007F07D /* ISEmptyStateView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +289,7 @@
 				F8361DF82716D2E00067D3CF /* UIViewController+Ext.swift in Sources */,
 				F8361E0C271732D30067D3CF /* IssueCell.swift in Sources */,
 				F8361DDE2716CB6E0067D3CF /* SceneDelegate.swift in Sources */,
+				F8D217DC27184A670007F07D /* ISEmptyStateView.swift in Sources */,
 				F8361DFF2716D4B80067D3CF /* Issue.swift in Sources */,
 				F8D217D5271845470007F07D /* UIHelper.swift in Sources */,
 			);
