@@ -23,6 +23,7 @@
 		F8361E0727171EFF0067D3CF /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = F8361E0627171EFF0067D3CF /* issues.csv */; };
 		F8361E09271731B80067D3CF /* ISIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E08271731B80067D3CF /* ISIconImageView.swift */; };
 		F8361E0C271732D30067D3CF /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E0B271732D30067D3CF /* IssueCell.swift */; };
+		F8D217D5271845470007F07D /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D217D4271845470007F07D /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F8361E0627171EFF0067D3CF /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
 		F8361E08271731B80067D3CF /* ISIconImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISIconImageView.swift; sourceTree = "<group>"; };
 		F8361E0B271732D30067D3CF /* IssueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
+		F8D217D4271845470007F07D /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				F8361E042716D7340067D3CF /* ISError.swift */,
+				F8D217D4271845470007F07D /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				F8361E0C271732D30067D3CF /* IssueCell.swift in Sources */,
 				F8361DDE2716CB6E0067D3CF /* SceneDelegate.swift in Sources */,
 				F8361DFF2716D4B80067D3CF /* Issue.swift in Sources */,
+				F8D217D5271845470007F07D /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,22 +33,10 @@ final class IssuesListViewController: UIViewController {
   }
   
   private func configureCollectionView() {
-    collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createOneColumnFlowLayout())
+    collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createOneColumnFlowLayout(in: view))
     view.addSubview(collectionView)
     collectionView.backgroundColor = .systemBackground
     collectionView.register(IssueCell.self, forCellWithReuseIdentifier: IssueCell.reuseId)
-  }
-  
-  private func createOneColumnFlowLayout() -> UICollectionViewFlowLayout {
-    let width = view.bounds.width
-    let padding: CGFloat = 12
-    let availableWidth = width - (padding * 2)
-    let itemWidth = availableWidth
-    
-    let flowLayout = UICollectionViewFlowLayout()
-    flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-    flowLayout.itemSize = CGSize(width: itemWidth, height: 100)
-    return flowLayout
   }
   
   private func configureDataSource() {
@@ -77,15 +65,15 @@ final class IssuesListViewController: UIViewController {
   }
   
   private func getIssues() {
-    FileManager.shared.getIssues { result in
+    FileManager.shared.getIssues { [weak self] result in
+      guard let self = self else { return }
+      
       switch result {
       case .success(let issues):
         self.issues = issues
         self.updateData()
       case .failure(let error):
-        self.presentISAlertOnMainThread(title: "Bad stuff happened",
-                                        message: error.rawValue,
-                                        buttonTitle: "Ok")
+        self.presentISAlertOnMainThread(title: "Bad stuff happened", message: error.rawValue, buttonTitle: "Ok")
       }
     }
   }
