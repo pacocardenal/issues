@@ -2,7 +2,7 @@
 //  UIHelper.swift
 //  issues
 //
-//  Created by m_949184 on 14/10/21.
+//  Created by Paco Cardenal on 14/10/21.
 //
 
 import UIKit
@@ -16,7 +16,7 @@ struct UIHelper {
     
     let flowLayout = UICollectionViewFlowLayout()
     flowLayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-    flowLayout.itemSize = CGSize(width: availableWidth, height: 100)
+    flowLayout.itemSize = CGSize(width: availableWidth, height: 80)
     return flowLayout
   }
   
