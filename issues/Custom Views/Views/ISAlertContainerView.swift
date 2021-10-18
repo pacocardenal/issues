@@ -9,6 +9,12 @@ import UIKit
 
 final class ISAlertContainerView: UIView {
   
+  // MARK: - Enums
+  enum Constants {
+    static let cornerRadius: CGFloat = 16
+    static let borderWidth: CGFloat = 2
+  }
+  
   // MARK: - Initializers
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -22,8 +28,8 @@ final class ISAlertContainerView: UIView {
   // MARK: - Private methods
   private func configure() {
     backgroundColor = .systemBackground
-    layer.cornerRadius = 16
-    layer.borderWidth = 2
+    layer.cornerRadius = Constants.cornerRadius
+    layer.borderWidth = Constants.borderWidth
     layer.borderColor = UIColor.white.cgColor
     translatesAutoresizingMaskIntoConstraints = false
   }

@@ -9,15 +9,28 @@ import UIKit
 
 final class IssueCell: UICollectionViewCell {
   
+  // MARK: - Enums
+  enum Constants {
+    static let bodyLabelFontSize: CGFloat = 16
+    static let titleLabelFontSize: CGFloat = 26
+    static let containerViewCornerRadius: CGFloat = 16
+    static let containerViewBorderWidth: CGFloat = 1
+    static let containerViewShadowOpacity: Float = 0.2
+    static let containerViewShadowRadius: CGFloat = 10
+    static let containerViewHeight: CGFloat = 80
+    static let commonPadding: CGFloat = 8
+    static let iconImageViewWidth: CGFloat = 50
+  }
+  
   // MARK: - Properties
   static let reuseId = "IssueCell"
   
   let containerView = UIView()
   let stackView = UIStackView()
   let iconImageView = ISIconImageView(frame: .zero)
-  let nameLabel = ISTitleLabel(textAlignment: .left, fontSize: 16)
+  let nameLabel = ISTitleLabel(textAlignment: .left, fontSize: Constants.bodyLabelFontSize)
   let dateOfBirthLabel = ISBodyLabel(textAlignment: .left)
-  let issuesCountLabel = ISTitleLabel(textAlignment: .right, fontSize: 26)
+  let issuesCountLabel = ISTitleLabel(textAlignment: .right, fontSize: Constants.titleLabelFontSize)
   
   // MARK: - Initializers
   override init(frame: CGRect) {
@@ -45,20 +58,20 @@ final class IssueCell: UICollectionViewCell {
     addSubview(containerView)
     
     containerView.backgroundColor = .systemBackground
-    containerView.layer.cornerRadius = 16
-    containerView.layer.borderWidth = 1
+    containerView.layer.cornerRadius = Constants.containerViewCornerRadius
+    containerView.layer.borderWidth = Constants.containerViewBorderWidth
     containerView.layer.borderColor = UIColor.white.cgColor
     
     containerView.layer.shadowColor = UIColor.systemGray.cgColor
-    containerView.layer.shadowOpacity = 0.2
+    containerView.layer.shadowOpacity = Constants.containerViewShadowOpacity
     containerView.layer.shadowOffset = .zero
-    containerView.layer.shadowRadius = 10
+    containerView.layer.shadowRadius = Constants.containerViewShadowRadius
     
     NSLayoutConstraint.activate([
       containerView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
       containerView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
       containerView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor),
-      containerView.heightAnchor.constraint(equalToConstant: 80)
+      containerView.heightAnchor.constraint(equalToConstant: Constants.containerViewHeight)
     ])
     
     containerView.translatesAutoresizingMaskIntoConstraints = false
@@ -75,12 +88,12 @@ final class IssueCell: UICollectionViewCell {
   private func layoutUI() {
     containerView.addSubviews(iconImageView, stackView, issuesCountLabel)
     
-    let padding: CGFloat = 8
+    let padding: CGFloat = Constants.commonPadding
     
     NSLayoutConstraint.activate([
       iconImageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
       iconImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
-      iconImageView.widthAnchor.constraint(equalToConstant: 60),
+      iconImageView.widthAnchor.constraint(equalToConstant: Constants.iconImageViewWidth),
       iconImageView.heightAnchor.constraint(equalTo: iconImageView.widthAnchor),
       
       stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: padding),
@@ -90,37 +103,10 @@ final class IssueCell: UICollectionViewCell {
       
       issuesCountLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
       issuesCountLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding * 3),
-      issuesCountLabel.heightAnchor.constraint(equalToConstant: 60)
+      issuesCountLabel.heightAnchor.constraint(equalToConstant: Constants.iconImageViewWidth)
     ])
     
     stackView.translatesAutoresizingMaskIntoConstraints = false
-  }
-  
-  private func configure() {
-    addSubviews(iconImageView, nameLabel, dateOfBirthLabel, issuesCountLabel)
-    
-    let padding: CGFloat = 8
-    
-    NSLayoutConstraint.activate([
-      iconImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
-      iconImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-      iconImageView.widthAnchor.constraint(equalToConstant: 60),
-      iconImageView.heightAnchor.constraint(equalTo: iconImageView.widthAnchor),
-      
-      nameLabel.topAnchor.constraint(equalTo: iconImageView.topAnchor, constant: 12),
-      nameLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: padding),
-      nameLabel.trailingAnchor.constraint(equalTo: issuesCountLabel.leadingAnchor, constant: -padding),
-      nameLabel.heightAnchor.constraint(equalToConstant: 12),
-      
-      dateOfBirthLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: padding),
-      dateOfBirthLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
-      dateOfBirthLabel.trailingAnchor.constraint(equalTo: nameLabel.trailingAnchor),
-      dateOfBirthLabel.heightAnchor.constraint(equalToConstant: 12),
-      
-      issuesCountLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
-      issuesCountLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding * 2),
-      issuesCountLabel.heightAnchor.constraint(equalToConstant: 60)
-    ])
   }
   
 }

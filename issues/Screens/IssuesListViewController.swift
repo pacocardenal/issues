@@ -9,6 +9,13 @@ import UIKit
 
 final class IssuesListViewController: ISDataLoadingViewController {
   
+  enum Constants {
+    static let searchControllerPlaceholder = "Search"
+    static let getIssuesFailureTitle = "Bad Stuff Happened"
+    static let getIssuesFailureButtonTitle = "Ok"
+    static let noIssuesMessage = "The datasource doesn't have any issues 🥲"
+  }
+  
   // MARK: - Enums
   enum Section {
     case main
@@ -46,28 +53,28 @@ final class IssuesListViewController: ISDataLoadingViewController {
   }
   
   private func configureSearchController() {
-       let searchController = UISearchController()
-       searchController.searchBar.delegate = self
-       searchController.searchResultsUpdater = self
-       searchController.searchBar.placeholder = "Search..."
-       searchController.obscuresBackgroundDuringPresentation = false
-       navigationItem.searchController = searchController
-   }
+    let searchController = UISearchController()
+    searchController.searchBar.delegate = self
+    searchController.searchResultsUpdater = self
+    searchController.searchBar.placeholder = Constants.searchControllerPlaceholder
+    searchController.obscuresBackgroundDuringPresentation = false
+    navigationItem.searchController = searchController
+  }
   
   private func configureDataSource() {
     dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView,
                                                     cellProvider: { (collectionView, indexPath, issue) -> UICollectionViewCell? in
-      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IssueCell.reuseId, for: indexPath) as? IssueCell else {
-        fatalError("""
+                                                      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IssueCell.reuseId, for: indexPath) as? IssueCell else {
+                                                        fatalError("""
                         Could not cast cell to \(IssueCell.self)
                         File: \(#file)
                         Function: \(#function)
                         Line: \(#line)
                         """)
-      }
-      cell.set(issue: issue)
-      return cell
-    })
+                                                      }
+                                                      cell.set(issue: issue)
+                                                      return cell
+                                                    })
   }
   
   private func updateData(on issues: [Issue]) {
@@ -89,7 +96,7 @@ final class IssuesListViewController: ISDataLoadingViewController {
       case .success(let issues):
         self.updateUI(with: issues)
       case .failure(let error):
-        self.presentISAlertOnMainThread(title: "Bad stuff happened", message: error.rawValue, buttonTitle: "Ok")
+        self.presentISAlertOnMainThread(title: Constants.getIssuesFailureTitle, message: error.rawValue, buttonTitle: Constants.getIssuesFailureButtonTitle)
       }
     }
   }
@@ -97,7 +104,7 @@ final class IssuesListViewController: ISDataLoadingViewController {
   private func updateUI(with issues: [Issue]) {
     self.issues = issues
     if self.issues.isEmpty {
-      let message = "The datasource doesn't have any issues 🥲"
+      let message = Constants.noIssuesMessage
       DispatchQueue.main.async {
         self.showEmptyState(with: message, in: self.view)
       }
@@ -112,21 +119,21 @@ final class IssuesListViewController: ISDataLoadingViewController {
 extension IssuesListViewController: UISearchBarDelegate, UISearchResultsUpdating {
   
   func updateSearchResults(for searchController: UISearchController) {
-       guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
-
-       filteredIssues = issues.filter { $0.fullName?.lowercased().contains(filter.lowercased()) ?? false }
-       updateData(on: filteredIssues)
-   }
-
-   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-       updateData(on: issues)
-   }
+    guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+    
+    filteredIssues = issues.filter { $0.fullName?.lowercased().contains(filter.lowercased()) ?? false }
+    updateData(on: filteredIssues)
+  }
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    updateData(on: issues)
+  }
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-       if searchText.isEmpty {
-           updateData(on: issues)
-       }
-   }
+    if searchText.isEmpty {
+      updateData(on: issues)
+    }
+  }
   
 }
 

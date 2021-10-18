@@ -9,12 +9,24 @@ import Foundation
 
 final class FileManager {
   
+  // MARK: - Enums
+  enum Constants {
+    static let fileName = "issues"
+    static let fileExtension = "csv"
+    static let newLineCharacter = "\n"
+    static let doubleNewLineCharacter = "\n\n"
+    static let separatorCharacter = ","
+    static let carriageReturnCharacter = "\r"
+    static let quoteCharacter = "\""
+    static let emptyCharacter = ""
+  }
+  
   // MARK: - Properties
   static let shared = FileManager()
   
   // MARK: - Internal methods
   func getIssues(completed: @escaping(Result<[Issue], ISError>) -> Void) {
-    guard let filepath = Bundle.main.path(forResource: "issues", ofType: "csv") else {
+    guard let filepath = Bundle.main.path(forResource: Constants.fileName, ofType: Constants.fileExtension) else {
       completed(.failure(.invalidFile))
       return
     }
@@ -40,9 +52,9 @@ final class FileManager {
     var result: [[String]] = []
     let cleanData = cleanRows(file: data)
     
-    let rows = cleanData.components(separatedBy: "\n")
+    let rows = cleanData.components(separatedBy: Constants.newLineCharacter)
     for row in rows {
-      let columns = row.components(separatedBy: ",")
+      let columns = row.components(separatedBy: Constants.separatorCharacter)
       result.append(columns)
     }
     
@@ -52,9 +64,9 @@ final class FileManager {
   private func cleanRows(file: String) -> String {
     var cleanFile = file
     
-    cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
-    cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
-    cleanFile = cleanFile.replacingOccurrences(of: "\"", with: "")
+    cleanFile = cleanFile.replacingOccurrences(of: Constants.carriageReturnCharacter, with: Constants.newLineCharacter)
+    cleanFile = cleanFile.replacingOccurrences(of: Constants.doubleNewLineCharacter, with: Constants.newLineCharacter)
+    cleanFile = cleanFile.replacingOccurrences(of: Constants.quoteCharacter, with: Constants.emptyCharacter)
     
     return cleanFile
   }

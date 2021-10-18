@@ -9,8 +9,18 @@ import UIKit
 
 final class ISEmptyStateView: UIView {
   
+  // MARK: - Enums
+  enum Constants {
+    static let messageLabelFontSize: CGFloat = 28
+    static let messageLabelNumberOfLines = 3
+    static let imageViewOffset: CGFloat = 150
+    static let messageLabelHeight: CGFloat = 200
+    static let commonPadding: CGFloat = 40
+    static let imageViewSizeMultiplier: CGFloat = 1.3
+  }
+  
   // MARK: - Properties
-  let messageLabel = ISTitleLabel(textAlignment: .center, fontSize: 28)
+  let messageLabel = ISTitleLabel(textAlignment: .center, fontSize: Constants.messageLabelFontSize)
   let logoImageView = UIImageView()
   
   // MARK: - Initializers
@@ -33,21 +43,21 @@ final class ISEmptyStateView: UIView {
   private func configure() {
     addSubviews(messageLabel, logoImageView)
     
-    messageLabel.numberOfLines = 3
+    messageLabel.numberOfLines = Constants.messageLabelNumberOfLines
     messageLabel.textColor = .secondaryLabel
     
     logoImageView.image = SFSymbols.issueListEmptyView?.withRenderingMode(.alwaysTemplate)
     logoImageView.tintColor = .systemGray
     
     NSLayoutConstraint.activate([
-      messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -150),
-      messageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
-      messageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
-      messageLabel.heightAnchor.constraint(equalToConstant: 200),
-      logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
-      logoImageView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
-      logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 170),
-      logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 40)
+      messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -Constants.imageViewOffset),
+      messageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.commonPadding),
+      messageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Constants.commonPadding),
+      messageLabel.heightAnchor.constraint(equalToConstant: Constants.messageLabelHeight),
+      logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: Constants.imageViewSizeMultiplier),
+      logoImageView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: Constants.imageViewSizeMultiplier),
+      logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Constants.imageViewOffset),
+      logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: Constants.commonPadding)
     ])
     
     logoImageView.translatesAutoresizingMaskIntoConstraints = false

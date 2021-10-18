@@ -9,6 +9,11 @@ import UIKit
 
 final class ISIconImageView: UIImageView {
   
+  // MARK: - Enums
+  enum Constants {
+    static let cornerRadius: CGFloat = 10
+  }
+  
   // MARK: - Properties
   let placeHolderImage = SFSymbols.issuePlaceholder?.withRenderingMode(.alwaysTemplate)
   
@@ -24,7 +29,7 @@ final class ISIconImageView: UIImageView {
   
   // MARK: - Private methods
   private func configure() {
-    layer.cornerRadius = 10
+    layer.cornerRadius = Constants.cornerRadius
     clipsToBounds = true
     tintColor = .systemGray
     image = placeHolderImage
