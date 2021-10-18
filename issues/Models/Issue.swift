@@ -2,12 +2,14 @@
 //  Issue.swift
 //  issues
 //
-//  Created by m_949184 on 13/10/21.
+//  Created by Paco Cardenal on 13/10/21.
 //
 
 import Foundation
 
 struct Issue: Hashable {
+  
+  // MARK: - Properties
   let _id: String?
   let firstName: String?
   let lastName: String?
@@ -18,6 +20,7 @@ struct Issue: Hashable {
     "\(firstName ?? "") \(lastName ?? "")"
   }
   
+  // MARK: - Initializers
   init?(row : [String]) {
     guard row.count == 4, let issues = Int(row[2]) else { return nil }
     
@@ -29,6 +32,7 @@ struct Issue: Hashable {
   }
 }
 
+// MARK: - Extension CustomStringConvertible
 extension Issue: CustomStringConvertible {
   var description: String {
     return """

@@ -2,16 +2,18 @@
 //  ISEmptyStateView.swift
 //  issues
 //
-//  Created by m_949184 on 14/10/21.
+//  Created by Paco Cardenal on 14/10/21.
 //
 
 import UIKit
 
-class ISEmptyStateView: UIView {
+final class ISEmptyStateView: UIView {
   
+  // MARK: - Properties
   let messageLabel = ISTitleLabel(textAlignment: .center, fontSize: 28)
   let logoImageView = UIImageView()
   
+  // MARK: - Initializers
   override init(frame: CGRect) {
     super.init(frame: frame)
     configure()
@@ -27,6 +29,7 @@ class ISEmptyStateView: UIView {
     configure()
   }
   
+  // MARK: - Private methods
   private func configure() {
     addSubviews(messageLabel, logoImageView)
     

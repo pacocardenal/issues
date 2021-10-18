@@ -2,17 +2,19 @@
 //  ISBodyLabel.swift
 //  issues
 //
-//  Created by m_949184 on 13/10/21.
+//  Created by Paco Cardenal on 13/10/21.
 //
 
 import UIKit
 
 final class ISBodyLabel: UILabel {
   
+  // MARK: - Enums
   enum Constants {
     static let minimumScaleFactor: CGFloat = 0.75
   }
   
+  // MARK: - Initializers
   override init(frame: CGRect) {
     super.init(frame: frame)
     configure()
@@ -27,6 +29,7 @@ final class ISBodyLabel: UILabel {
     self.textAlignment = textAlignment
   }
   
+  // MARK: - Private methods
   private func configure() {
     textColor = .secondaryLabel
     font = UIFont.preferredFont(forTextStyle: .body)

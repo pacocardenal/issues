@@ -2,22 +2,25 @@
 //  ViewController.swift
 //  issues
 //
-//  Created by m_949184 on 13/10/21.
+//  Created by Paco Cardenal on 13/10/21.
 //
 
 import UIKit
 
 final class IssuesListViewController: ISDataLoadingViewController {
   
+  // MARK: - Enums
   enum Section {
     case main
   }
   
-  var collectionView: UICollectionView!
-  var issues = [Issue]()
-  var filteredIssues = [Issue]()
-  var dataSource: UICollectionViewDiffableDataSource<Section, Issue>!
+  // MARK: - Properties
+  private var collectionView: UICollectionView!
+  private var issues = [Issue]()
+  private var filteredIssues = [Issue]()
+  private var dataSource: UICollectionViewDiffableDataSource<Section, Issue>!
   
+  // MARK: - View life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -29,6 +32,7 @@ final class IssuesListViewController: ISDataLoadingViewController {
     
   }
   
+  // MARK: - Private methods
   private func configureViewController() {
     view.backgroundColor = .systemBackground
     navigationController?.navigationBar.prefersLargeTitles = true
@@ -104,6 +108,7 @@ final class IssuesListViewController: ISDataLoadingViewController {
   
 }
 
+// MARK: - Extension UISearchController
 extension IssuesListViewController: UISearchBarDelegate, UISearchResultsUpdating {
   
   func updateSearchResults(for searchController: UISearchController) {

@@ -2,15 +2,17 @@
 //  ISDataLoadingViewController.swift
 //  issues
 //
-//  Created by m_949184 on 18/10/21.
+//  Created by Paco Cardenal on 18/10/21.
 //
 
 import UIKit
 
 class ISDataLoadingViewController: UIViewController {
   
+  // MARK: - Properties
   var containerView: UIView!
   
+  // MARK: - Internal methods
   func showLoadingView() {
     containerView = UIView(frame: view.bounds)
     view.addSubview(containerView)

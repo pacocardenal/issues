@@ -2,15 +2,17 @@
 //  ISIconImageView.swift
 //  issues
 //
-//  Created by m_949184 on 13/10/21.
+//  Created by Paco Cardenal on 13/10/21.
 //
 
 import UIKit
 
-class ISIconImageView: UIImageView {
+final class ISIconImageView: UIImageView {
   
-  var placeHolderImage = SFSymbols.issuePlaceholder?.withRenderingMode(.alwaysTemplate)
+  // MARK: - Properties
+  let placeHolderImage = SFSymbols.issuePlaceholder?.withRenderingMode(.alwaysTemplate)
   
+  // MARK: - Initializers
   override init(frame: CGRect) {
     super.init(frame: frame)
     configure()
@@ -20,6 +22,7 @@ class ISIconImageView: UIImageView {
     fatalError("init(coder:) has not been implemented")
   }
   
+  // MARK: - Private methods
   private func configure() {
     layer.cornerRadius = 10
     clipsToBounds = true

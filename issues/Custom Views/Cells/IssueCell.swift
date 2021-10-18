@@ -2,19 +2,20 @@
 //  IssueCell.swift
 //  issues
 //
-//  Created by m_949184 on 13/10/21.
+//  Created by Paco Cardenal on 13/10/21.
 //
 
 import UIKit
 
-class IssueCell: UICollectionViewCell {
+final class IssueCell: UICollectionViewCell {
+  // MARK: - Properties
   static let reuseId = "IssueCell"
-  
   let iconImageView = ISIconImageView(frame: .zero)
   let nameLabel = ISTitleLabel(textAlignment: .left, fontSize: 16)
   let dateOfBirthLabel = ISBodyLabel(textAlignment: .left)
   let issuesCountLabel = ISTitleLabel(textAlignment: .right, fontSize: 26)
   
+  // MARK: - Initializers
   override init(frame: CGRect) {
     super.init(frame: frame)
     configure()
@@ -24,6 +25,16 @@ class IssueCell: UICollectionViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
+  // MARK: - Internal methods
+  func set(issue: Issue) {
+    nameLabel.text = issue.fullName
+    dateOfBirthLabel.text = issue.dateOfBirth
+    if let numberOfIssues = issue.issueCount {
+      issuesCountLabel.text = "\(numberOfIssues)"
+    }
+  }
+  
+  // MARK: - Private methods
   private func configure() {
     addSubviews(iconImageView, nameLabel, dateOfBirthLabel, issuesCountLabel)
     
@@ -50,12 +61,5 @@ class IssueCell: UICollectionViewCell {
       issuesCountLabel.heightAnchor.constraint(equalToConstant: 60)
     ])
   }
-  
-  func set(issue: Issue) {
-    nameLabel.text = issue.fullName
-    dateOfBirthLabel.text = issue.dateOfBirth
-    if let numberOfIssues = issue.issueCount {
-      issuesCountLabel.text = "\(numberOfIssues)"
-    }
-  }
+
 }

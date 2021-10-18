@@ -2,13 +2,14 @@
 //  ISAlertViewController.swift
 //  issues
 //
-//  Created by m_949184 on 13/10/21.
+//  Created by Paco Cardenal on 13/10/21.
 //
 
 import UIKit
 
 final class ISAlertViewController: UIViewController {
   
+  // MARK: - Enums
   enum Constants {
     static let titleLabelFontSize: CGFloat = 20
     static let commonPadding: CGFloat = 20
@@ -25,6 +26,7 @@ final class ISAlertViewController: UIViewController {
     static let backgroundColor = UIColor.black.withAlphaComponent(0.75)
   }
   
+  // MARK: - Properties
   let containerView = ISAlertContainerView()
   let titleLabel = ISTitleLabel(textAlignment: .center, fontSize: Constants.titleLabelFontSize)
   let messageLabel = ISBodyLabel(textAlignment: .center)
@@ -36,6 +38,7 @@ final class ISAlertViewController: UIViewController {
   
   let padding: CGFloat = Constants.commonPadding
   
+  // MARK: - Initializers
   init(title: String, message: String, buttonTitle: String) {
     super.init(nibName: nil, bundle: nil)
     self.alertTitle = title
@@ -47,6 +50,7 @@ final class ISAlertViewController: UIViewController {
     fatalError("init(coder:) has not been implemented")
   }
   
+  // MARK: - View life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -57,7 +61,8 @@ final class ISAlertViewController: UIViewController {
     configureMessageLabel()
   }
   
-  func configureContainerView() {
+  // MARK: - Private methods
+  private func configureContainerView() {
     view.addSubview(containerView)
     
     NSLayoutConstraint.activate([
@@ -70,7 +75,7 @@ final class ISAlertViewController: UIViewController {
     containerView.translatesAutoresizingMaskIntoConstraints = false
   }
   
-  func configureTitleLabel() {
+  private func configureTitleLabel() {
     containerView.addSubview(titleLabel)
     titleLabel.text = alertTitle ?? Constants.titleLabelGenericMessage
     
@@ -84,7 +89,7 @@ final class ISAlertViewController: UIViewController {
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
   }
   
-  func configureActionButton() {
+  private func configureActionButton() {
     containerView.addSubview(actionButton)
     actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
     
@@ -98,7 +103,7 @@ final class ISAlertViewController: UIViewController {
     actionButton.translatesAutoresizingMaskIntoConstraints = false
   }
   
-  func configureMessageLabel() {
+  private func configureMessageLabel() {
     containerView.addSubview(messageLabel)
     messageLabel.text =  message ?? Constants.messageLabelGenericMessage
     messageLabel.numberOfLines = Constants.messageLabelNumerOfLines
@@ -113,6 +118,7 @@ final class ISAlertViewController: UIViewController {
     messageLabel.translatesAutoresizingMaskIntoConstraints = false
   }
   
+  // MARK: - User interaction
   @objc func dismissVC() {
     dismiss(animated: true)
   }

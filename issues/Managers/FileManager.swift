@@ -2,15 +2,17 @@
 //  FileManager.swift
 //  issues
 //
-//  Created by m_949184 on 13/10/21.
+//  Created by Paco Cardenal on 13/10/21.
 //
 
 import Foundation
 
-class FileManager {
+final class FileManager {
   
+  // MARK: - Properties
   static let shared = FileManager()
   
+  // MARK: - Internal methods
   func getIssues(completed: @escaping(Result<[Issue], ISError>) -> Void) {
     guard let filepath = Bundle.main.path(forResource: "issues", ofType: "csv") else {
       completed(.failure(.invalidFile))
@@ -33,6 +35,7 @@ class FileManager {
     
   }
   
+  // MARK: - Private methods
   private func readCsv(data: String) -> [[String]] {
     var result: [[String]] = []
     let cleanData = cleanRows(file: data)

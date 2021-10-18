@@ -2,17 +2,19 @@
 //  ISTitleLabel.swift
 //  issues
 //
-//  Created by m_949184 on 13/10/21.
+//  Created by Paco Cardenal on 13/10/21.
 //
 
 import UIKit
 
 final class ISTitleLabel: UILabel {
   
+  // MARK: - Enums
   enum Constants {
     static let minimumScaleFactor: CGFloat = 0.9
   }
   
+  // MARK: - Initializers
   override init(frame: CGRect) {
     super.init(frame: frame)
     configure()
@@ -28,6 +30,7 @@ final class ISTitleLabel: UILabel {
     font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
   }
   
+  // MARK: - Private methods
   private func configure() {
     textColor = .label
     adjustsFontSizeToFitWidth = true
