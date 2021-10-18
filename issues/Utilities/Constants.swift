@@ -5,9 +5,9 @@
 //  Created by m_949184 on 14/10/21.
 //
 
-import Foundation
+import UIKit
 
 enum SFSymbols {
-  static let issuePlaceholder = "ant.circle"
-  static let issueListEmptyView = "exclamationmark.triangle"
+  static let issuePlaceholder = UIImage(systemName: "ant.circle")
+  static let issueListEmptyView = UIImage(systemName: "exclamationmark.triangle")
 }

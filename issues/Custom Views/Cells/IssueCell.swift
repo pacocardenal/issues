@@ -25,10 +25,7 @@ class IssueCell: UICollectionViewCell {
   }
   
   private func configure() {
-    addSubview(iconImageView)
-    addSubview(nameLabel)
-    addSubview(dateOfBirthLabel)
-    addSubview(issuesCountLabel)
+    addSubviews(iconImageView, nameLabel, dateOfBirthLabel, issuesCountLabel)
     
     let padding: CGFloat = 8
     

@@ -83,19 +83,23 @@ final class IssuesListViewController: ISDataLoadingViewController {
       self.dismissLoadingView()
       switch result {
       case .success(let issues):
-        self.issues = issues
-        if self.issues.isEmpty {
-          let message = "The datasource doesn't have any issues 🥲"
-          DispatchQueue.main.async {
-            self.showEmptyState(with: message, in: self.view)
-          }
-          return
-        }
-        self.updateData(on: issues)
+        self.updateUI(with: issues)
       case .failure(let error):
         self.presentISAlertOnMainThread(title: "Bad stuff happened", message: error.rawValue, buttonTitle: "Ok")
       }
     }
+  }
+  
+  private func updateUI(with issues: [Issue]) {
+    self.issues = issues
+    if self.issues.isEmpty {
+      let message = "The datasource doesn't have any issues 🥲"
+      DispatchQueue.main.async {
+        self.showEmptyState(with: message, in: self.view)
+      }
+      return
+    }
+    self.updateData(on: issues)
   }
   
 }
