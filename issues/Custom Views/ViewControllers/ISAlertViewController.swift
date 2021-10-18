@@ -12,8 +12,6 @@ final class ISAlertViewController: UIViewController {
   enum Constants {
     static let titleLabelFontSize: CGFloat = 20
     static let commonPadding: CGFloat = 20
-    static let containerViewCornerRadius: CGFloat = 16
-    static let containerViewCornerWidth: CGFloat = 2
     static let containerViewWidth: CGFloat = 280
     static let containerViewHeight: CGFloat = 200
     static let titleLabelHeight: CGFloat = 28
@@ -24,10 +22,10 @@ final class ISAlertViewController: UIViewController {
     static let titleLabelGenericMessage = "Something went wrong"
     static let messageLabelGenericMessage = "Unable to complete request"
     
-    static let backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
+    static let backgroundColor = UIColor.black.withAlphaComponent(0.75)
   }
   
-  let containerView = UIView()
+  let containerView = ISAlertContainerView()
   let titleLabel = ISTitleLabel(textAlignment: .center, fontSize: Constants.titleLabelFontSize)
   let messageLabel = ISBodyLabel(textAlignment: .center)
   let actionButton = ISButton(backgroundColor: .systemPink, title: Constants.actionButtonTitle)
@@ -61,11 +59,6 @@ final class ISAlertViewController: UIViewController {
   
   func configureContainerView() {
     view.addSubview(containerView)
-    
-    containerView.backgroundColor = .systemBackground
-    containerView.layer.cornerRadius = Constants.containerViewCornerRadius
-    containerView.layer.borderWidth = Constants.containerViewCornerWidth
-    containerView.layer.borderColor = UIColor.white.cgColor
     
     NSLayoutConstraint.activate([
       containerView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class IssuesListViewController: UIViewController {
+final class IssuesListViewController: ISDataLoadingViewController {
   
   enum Section {
     case main
