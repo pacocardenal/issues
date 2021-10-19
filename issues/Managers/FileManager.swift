@@ -35,7 +35,7 @@ final class FileManager {
     do {
       let contents = try String(contentsOfFile: filepath, encoding: .utf8)
       let csvRows = readCsv(data: contents)
-      for row in csvRows {
+      for row in csvRows where row != csvRows.first {
         if let issue = Issue(row: row) {
           issues.append(issue)
         }

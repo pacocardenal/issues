@@ -48,7 +48,7 @@ final class IssueCell: UICollectionViewCell {
   func set(issue: Issue) {
     nameLabel.text = issue.fullName
     dateOfBirthLabel.text = issue.dateOfBirth
-    if let numberOfIssues = issue.issueCount {
+    if let numberOfIssues = issue.issuesCount {
       issuesCountLabel.text = "\(numberOfIssues)"
     }
   }
