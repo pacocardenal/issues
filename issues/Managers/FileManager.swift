@@ -31,10 +31,33 @@ final class FileManager {
       return
     }
     
+    var completeFileString = ""
     var issues = [Issue]()
+    
     do {
-      let contents = try String(contentsOfFile: filepath, encoding: .utf8)
-      let csvRows = readCsv(data: contents)
+      
+      let data = try Data(contentsOf: URL(fileURLWithPath: filepath))
+      let dataLen = data.count
+      // Reads in chunks of 1 MB
+      let chunkSize = ((1024 * 1000) * 1)
+      let fullChunks = Int(dataLen / chunkSize)
+      let totalChunks = fullChunks + (dataLen % 1024 != 0 ? 1 : 0)
+
+      for chunkCounter in 0 ..< totalChunks {
+        var chunk: Data
+        let chunkBase = chunkCounter * chunkSize
+        var diff = chunkSize
+        if(chunkCounter == totalChunks - 1) {
+          diff = dataLen - chunkBase
+        }
+        let range: Range<Data.Index> = (chunkBase ..< (chunkBase + diff))
+        chunk = data.subdata(in: range)
+        if let stringChunk = String(data: chunk, encoding: .utf8) {
+          completeFileString += stringChunk
+        }
+      }
+      
+      let csvRows = readCsv(data: completeFileString)
       for row in csvRows where row != csvRows.first {
         if let issue = Issue(row: row) {
           issues.append(issue)
