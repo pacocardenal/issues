@@ -10,7 +10,7 @@ import UIKit
 final class ISAlertViewController: UIViewController {
   
   // MARK: - Enums
-  enum Constants {
+  private enum Constants {
     static let titleLabelFontSize: CGFloat = 20
     static let commonPadding: CGFloat = 20
     static let containerViewWidth: CGFloat = 280

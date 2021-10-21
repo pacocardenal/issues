@@ -9,7 +9,7 @@ import UIKit
 
 final class IssuesListViewController: ISDataLoadingViewController {
   
-  enum Constants {
+  private enum Constants {
     static let searchControllerPlaceholder = "Search"
     static let getIssuesFailureTitle = "Bad Stuff Happened"
     static let getIssuesFailureButtonTitle = "Ok"

@@ -10,10 +10,10 @@ import UIKit
 struct UIHelper {
   
   // MARK: - Enums
-   enum Constants {
-       static let padding: CGFloat = 12
-       static let flowLayoutHeight: CGFloat = 80
-   }
+  private enum Constants {
+    static let padding: CGFloat = 12
+    static let flowLayoutHeight: CGFloat = 80
+  }
   
   // MARK: - Methods
   static func createOneColumnFlowLayout(in view: UIView) -> UICollectionViewFlowLayout {

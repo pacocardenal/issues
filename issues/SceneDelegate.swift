@@ -8,7 +8,7 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+  
   // MARK: - Enums
   private enum Constants {
     static let issuesListViewControllerTitle = "Issues"
@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   
   // MARK: - Properties
   var window: UIWindow?
-
+  
   // MARK: - Life cycle
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -37,6 +37,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   private func configureNavigationBar() {
     UINavigationBar.appearance().tintColor = .systemOrange
   }
-
+  
 }
 

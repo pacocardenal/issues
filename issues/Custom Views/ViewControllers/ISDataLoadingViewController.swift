@@ -10,7 +10,7 @@ import UIKit
 class ISDataLoadingViewController: UIViewController {
   
   // MARK: - Enums
-  enum Constants {
+  private enum Constants {
     static let animationAlphaBegin: CGFloat = 0
     static let animationAlphaEnd: CGFloat = 0.8
     static let animationDuration: TimeInterval = 0.25

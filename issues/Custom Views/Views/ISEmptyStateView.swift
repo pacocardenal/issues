@@ -10,7 +10,7 @@ import UIKit
 final class ISEmptyStateView: UIView {
   
   // MARK: - Enums
-  enum Constants {
+  private enum Constants {
     static let messageLabelFontSize: CGFloat = 28
     static let messageLabelNumberOfLines = 3
     static let imageViewOffset: CGFloat = 150

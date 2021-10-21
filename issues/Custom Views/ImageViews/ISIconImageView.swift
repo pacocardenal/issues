@@ -10,7 +10,7 @@ import UIKit
 final class ISIconImageView: UIImageView {
   
   // MARK: - Enums
-  enum Constants {
+  private enum Constants {
     static let cornerRadius: CGFloat = 10
   }
   

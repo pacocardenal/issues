@@ -10,7 +10,7 @@ import UIKit
 final class ISButton: UIButton {
   
   // MARK: - Enums
-  enum Constants {
+  private enum Constants {
     static let cornerRadius: CGFloat = 10
     static let color: UIColor = .white
   }

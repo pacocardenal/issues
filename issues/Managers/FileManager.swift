@@ -10,7 +10,7 @@ import Foundation
 final class FileManager: IssuesManager {
   
   // MARK: - Enums
-  enum Constants {
+  private enum Constants {
     static let fileName = "issues"
     static let fileExtension = "csv"
     static let newLineCharacter = "\n"
@@ -42,7 +42,7 @@ final class FileManager: IssuesManager {
       let chunkSize = ((1024 * 1000) * 1)
       let fullChunks = Int(dataLen / chunkSize)
       let totalChunks = fullChunks + (dataLen % 1024 != 0 ? 1 : 0)
-
+      
       for chunkCounter in 0 ..< totalChunks {
         var chunk: Data
         let chunkBase = chunkCounter * chunkSize

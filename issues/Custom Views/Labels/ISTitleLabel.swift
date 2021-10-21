@@ -10,7 +10,7 @@ import UIKit
 final class ISTitleLabel: UILabel {
   
   // MARK: - Enums
-  enum Constants {
+  private enum Constants {
     static let minimumScaleFactor: CGFloat = 0.9
   }
   

@@ -18,7 +18,7 @@ struct Issue: Hashable {
   }
   
   // MARK: - Properties
-//  let _id: String? = nil
+  //  let _id: String? = nil
   let firstName: String?
   let lastName: String?
   let issuesCount: Int?

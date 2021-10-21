@@ -10,7 +10,7 @@ import UIKit
 final class IssueCell: UICollectionViewCell {
   
   // MARK: - Enums
-  enum Constants {
+  private enum Constants {
     static let bodyLabelFontSize: CGFloat = 16
     static let titleLabelFontSize: CGFloat = 26
     static let containerViewCornerRadius: CGFloat = 16
