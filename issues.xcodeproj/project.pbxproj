@@ -32,6 +32,9 @@
 		F8D217D5271845470007F07D /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D217D4271845470007F07D /* UIHelper.swift */; };
 		F8D217DC27184A670007F07D /* ISEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D217DB27184A670007F07D /* ISEmptyStateView.swift */; };
 		F8D217DE27184B980007F07D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D217DD27184B980007F07D /* Constants.swift */; };
+		F8E183E9272161B40007A423 /* IssuesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E183E8272161B40007A423 /* IssuesListViewModel.swift */; };
+		F8E183EB272162C30007A423 /* IssuesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E183EA272162C30007A423 /* IssuesManager.swift */; };
+		F8E183ED27217A6E0007A423 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F8E183EC27217A6E0007A423 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		F8D217D4271845470007F07D /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		F8D217DB27184A670007F07D /* ISEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISEmptyStateView.swift; sourceTree = "<group>"; };
 		F8D217DD27184B980007F07D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F8E183E8272161B40007A423 /* IssuesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesListViewModel.swift; sourceTree = "<group>"; };
+		F8E183EA272162C30007A423 /* IssuesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesManager.swift; sourceTree = "<group>"; };
+		F8E183EC27217A6E0007A423 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		F8361DCF2716CB6E0067D3CF = {
 			isa = PBXGroup;
 			children = (
+				F8E183EC27217A6E0007A423 /* README.md */,
 				F8361DDA2716CB6E0067D3CF /* issues */,
 				F881C053271EFB4B0053F9F2 /* issuesTests */,
 				F8361DD92716CB6E0067D3CF /* Products */,
@@ -119,6 +126,7 @@
 				F8361DDD2716CB6E0067D3CF /* SceneDelegate.swift */,
 				F8361DE92716CB6F0067D3CF /* Info.plist */,
 				F8361DFD2716D4A40067D3CF /* Models */,
+				F8E183E7272160900007A423 /* ViewModels */,
 				F8361E002716D6BD0067D3CF /* Managers */,
 				F8361DF92716D3940067D3CF /* Screens */,
 				F8361DFA2716D3A20067D3CF /* Custom Views */,
@@ -182,6 +190,7 @@
 		F8361E002716D6BD0067D3CF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				F8E183EA272162C30007A423 /* IssuesManager.swift */,
 				F8361E012716D6CE0067D3CF /* FileManager.swift */,
 			);
 			path = Managers;
@@ -255,6 +264,14 @@
 				F881C048271D7E0B0053F9F2 /* ISAlertContainerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F8E183E7272160900007A423 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F8E183E8272161B40007A423 /* IssuesListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +357,7 @@
 			files = (
 				F8361E0727171EFF0067D3CF /* issues.csv in Resources */,
 				F8361DE82716CB6F0067D3CF /* LaunchScreen.storyboard in Resources */,
+				F8E183ED27217A6E0007A423 /* README.md in Resources */,
 				F8361DE52716CB6F0067D3CF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +386,7 @@
 				F8361DF42716D2270067D3CF /* ISTitleLabel.swift in Sources */,
 				F8D217DE27184B980007F07D /* Constants.swift in Sources */,
 				F881C049271D7E0B0053F9F2 /* ISAlertContainerView.swift in Sources */,
+				F8E183E9272161B40007A423 /* IssuesListViewModel.swift in Sources */,
 				F8361E022716D6CE0067D3CF /* FileManager.swift in Sources */,
 				F8361DF02716D1BA0067D3CF /* ISBodyLabel.swift in Sources */,
 				F8361DF82716D2E00067D3CF /* UIViewController+Ext.swift in Sources */,
@@ -375,6 +394,7 @@
 				F881C04B271D7E700053F9F2 /* ISDataLoadingViewController.swift in Sources */,
 				F874815E27200C2200D740FF /* String+Ext.swift in Sources */,
 				F8361DDE2716CB6E0067D3CF /* SceneDelegate.swift in Sources */,
+				F8E183EB272162C30007A423 /* IssuesManager.swift in Sources */,
 				F8D217DC27184A670007F07D /* ISEmptyStateView.swift in Sources */,
 				F8361DFF2716D4B80067D3CF /* Issue.swift in Sources */,
 				F8D217D5271845470007F07D /* UIHelper.swift in Sources */,

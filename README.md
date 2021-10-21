@@ -144,3 +144,6 @@ The result should be delivered as a link or email attachment
 | Screenshot 21 (App icon) | Screenshot 22 (Launch screen) |
 | ------------- | ------------- |
 | ![screenshot21](.screenshots/ss21.png) | ![screenshot22](.screenshots/ss22.png) |
+
+### MVVM on List Issues screen
+> Implement MVVM architecture on the list issues screen

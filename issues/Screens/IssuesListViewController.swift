@@ -26,20 +26,37 @@ final class IssuesListViewController: ISDataLoadingViewController {
   private var issues = [Issue]()
   private var filteredIssues = [Issue]()
   private var dataSource: UICollectionViewDiffableDataSource<Section, Issue>!
+  private var issuesListViewModel: IssuesListViewModel!
   
   // MARK: - View life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupBinding()
     configureViewController()
     configureCollectionView()
     configureSearchController()
     configureDataSource()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     getIssues()
-    
   }
   
   // MARK: - Private methods
+  private func setupBinding() {
+    issuesListViewModel = IssuesListViewModel(withManager: FileManager.shared)
+    issuesListViewModel.bindIssuesListViewModelToController = {
+      self.dismissLoadingView()
+      self.updateUI(with: self.issuesListViewModel.isssuesList)
+    }
+    issuesListViewModel.bindErrorMessageIssuesListViewModelToController = {
+      self.dismissLoadingView()
+      self.presentISAlertOnMainThread(title: Constants.getIssuesFailureTitle, message: self.issuesListViewModel.errorMessage, buttonTitle: Constants.getIssuesFailureButtonTitle)
+    }
+  }
+  
   private func configureViewController() {
     view.backgroundColor = .systemBackground
     navigationController?.navigationBar.prefersLargeTitles = true
@@ -87,18 +104,8 @@ final class IssuesListViewController: ISDataLoadingViewController {
   }
   
   private func getIssues() {
-    showLoadingView()
-    FileManager.shared.getIssues { [weak self] result in
-      guard let self = self else { return }
-      
-      self.dismissLoadingView()
-      switch result {
-      case .success(let issues):
-        self.updateUI(with: issues)
-      case .failure(let error):
-        self.presentISAlertOnMainThread(title: Constants.getIssuesFailureTitle, message: error.rawValue, buttonTitle: Constants.getIssuesFailureButtonTitle)
-      }
-    }
+    self.showLoadingView()
+    issuesListViewModel.bind()
   }
   
   private func updateUI(with issues: [Issue]) {
@@ -121,17 +128,17 @@ extension IssuesListViewController: UISearchBarDelegate, UISearchResultsUpdating
   func updateSearchResults(for searchController: UISearchController) {
     guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
     
-    filteredIssues = issues.filter { $0.fullName?.lowercased().contains(filter.lowercased()) ?? false }
+    filteredIssues = issuesListViewModel.isssuesList.filter { $0.fullName?.lowercased().contains(filter.lowercased()) ?? false }
     updateData(on: filteredIssues)
   }
   
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-    updateData(on: issues)
+    updateData(on: issuesListViewModel.isssuesList)
   }
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     if searchText.isEmpty {
-      updateData(on: issues)
+      updateData(on: issuesListViewModel.isssuesList)
     }
   }
   

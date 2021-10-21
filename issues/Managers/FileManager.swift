@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FileManager {
+final class FileManager: IssuesManager {
   
   // MARK: - Enums
   enum Constants {
