@@ -149,4 +149,11 @@ The result should be delivered as a link or email attachment
 > Implement MVVM architecture on the list issues screen
 
 ### Order issues by full name
-> Set cell order by full name model property
+| Screenshot 23 (App icon) | Screenshot 24 (Launch screen) |
+| ------------- | ------------- |
+| ![screenshot23](.screenshots/ss23.png) | ![screenshot24](.screenshots/ss24.png) |
+
+### Refactor #5
+* Convenience init on model extension
+* Extract file manager data read
+* Add cell layout constants

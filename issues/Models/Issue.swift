@@ -18,7 +18,7 @@ struct Issue: Hashable {
   }
   
   // MARK: - Properties
-  //  let _id: String? = nil
+  let _id = UUID()
   let firstName: String?
   let lastName: String?
   let issuesCount: Int?
@@ -28,41 +28,46 @@ struct Issue: Hashable {
     "\(firstName ?? "") \(lastName ?? "")"
   }
   
-  // MARK: - Initializers
+}
+
+// MARK: - Extension convenience initializers
+extension Issue {
   init?(row : [String?]) {
-    guard row.count == 4 else { return nil }
+      guard row.count == 4 else { return nil }
     
-    if let firstName = row[0] {
-      self.firstName = firstName
-    } else {
-      self.firstName = Constants.defaultFirstName
+    var firstName = Constants.defaultFirstName
+    var lastName = Constants.defaultLastName
+    var issuesCount = Constants.defaultIssuesCount
+    var dateOfBirth = Constants.defaultDateOfBirth
+      
+      if let rowFirstName = row[0] {
+        firstName = rowFirstName
+      }
+      
+      if let rowLastName = row[1] {
+        lastName = rowLastName
+      }
+      
+      if let issues = row[2], let rowIssuesCount = Int(issues) {
+        issuesCount = rowIssuesCount
+      }
+      
+      if let rowDateOfBirth = row[3] {
+        dateOfBirth = rowDateOfBirth
+      }
+      
+      if firstName == Constants.defaultFirstName &&
+          lastName == Constants.defaultLastName &&
+          issuesCount == Constants.defaultIssuesCount &&
+          dateOfBirth == Constants.defaultDateOfBirth {
+        return nil
+      } else {
+        self.init(firstName: firstName,
+                  lastName: lastName,
+                  issuesCount: issuesCount,
+                  dateOfBirth: dateOfBirth)
+      }
     }
-    
-    if let lastName = row[1] {
-      self.lastName = lastName
-    } else {
-      self.lastName = Constants.defaultLastName
-    }
-    
-    if let issues = row[2], let issuesCount = Int(issues) {
-      self.issuesCount = issuesCount
-    } else {
-      self.issuesCount = Constants.defaultIssuesCount
-    }
-    
-    if let dateOfBirth = row[3] {
-      self.dateOfBirth = dateOfBirth
-    } else {
-      self.dateOfBirth = Constants.defaultDateOfBirth
-    }
-    
-    if self.firstName == Constants.defaultFirstName &&
-        self.lastName == Constants.defaultLastName &&
-        self.issuesCount == Constants.defaultIssuesCount &&
-        self.dateOfBirth == Constants.defaultDateOfBirth {
-      return nil
-    }
-  }
 }
 
 // MARK: - Extension CustomStringConvertible

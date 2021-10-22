@@ -19,6 +19,7 @@ final class IssueCell: UICollectionViewCell {
     static let containerViewShadowRadius: CGFloat = 10
     static let containerViewHeight: CGFloat = 80
     static let commonPadding: CGFloat = 8
+    static let bigPadding: CGFloat = 24
     static let iconImageViewWidth: CGFloat = 50
   }
   
@@ -102,7 +103,7 @@ final class IssueCell: UICollectionViewCell {
       stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -padding),
       
       issuesCountLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-      issuesCountLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding * 3),
+      issuesCountLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.bigPadding),
       issuesCountLabel.heightAnchor.constraint(equalToConstant: Constants.iconImageViewWidth)
     ])
     
