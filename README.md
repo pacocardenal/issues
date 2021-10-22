@@ -147,3 +147,6 @@ The result should be delivered as a link or email attachment
 
 ### MVVM on List Issues screen
 > Implement MVVM architecture on the list issues screen
+
+### Order issues by full name
+> Set cell order by full name model property

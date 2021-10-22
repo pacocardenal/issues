@@ -63,7 +63,12 @@ final class FileManager: IssuesManager {
           issues.append(issue)
         }
       }
-      completed(.success(issues))
+      completed(.success(issues.sorted(by: {
+        if let firstFullName = $0.fullName, let secondFullName = $1.fullName {
+          return firstFullName < secondFullName
+        }
+        return false
+      })))
     } catch {
       completed(.failure(.invalidData))
     }
