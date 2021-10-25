@@ -23,12 +23,11 @@ final class CsvFileTypeManager: FileTypeManager {
   static let shared = CsvFileTypeManager()
   
   // MARK: - Internal methods
-  func read(filePath: String) throws -> [Issue] {
+  func read(content: String) -> [Issue] {
     var csvRows: [[String]] = []
     var issues = [Issue]()
     
-    let data = try FileReadManager.shared.readData(from: filePath)
-    let cleanData = cleanRows(file: data)
+    let cleanData = cleanRows(file: content)
     
     let rows = cleanData.components(separatedBy: Constants.newLineCharacter)
     for row in rows {

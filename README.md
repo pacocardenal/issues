@@ -166,3 +166,6 @@ The result should be delivered as a link or email attachment
 
 ### File read manager tests
 > Tests for the read manager class
+
+### CSV file manager tests
+> Tests for the CSV file manager class

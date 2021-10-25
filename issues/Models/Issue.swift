@@ -83,3 +83,12 @@ extension Issue: CustomStringConvertible {
       """
   }
 }
+
+// MARK: - Extension Equatable
+extension Issue: Equatable {
+  static func == (lhs: Self, rhs: Self) -> Bool {
+    return lhs.fullName == rhs.fullName &&
+      lhs.dateOfBirth == rhs.dateOfBirth &&
+      lhs.issuesCount == rhs.issuesCount
+  }
+}

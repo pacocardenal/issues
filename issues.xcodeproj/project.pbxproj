@@ -39,6 +39,7 @@
 		F8FE0A852726A2E900E1222D /* FileReadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A842726A2E900E1222D /* FileReadManager.swift */; };
 		F8FE0A872726A42B00E1222D /* CsvFileTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A862726A42B00E1222D /* CsvFileTypeManager.swift */; };
 		F8FE0A892726AA6600E1222D /* FileTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A882726AA6600E1222D /* FileTypeManager.swift */; };
+		F8FE0A8D27270E5300E1222D /* CsvFileTypeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A8C27270E5300E1222D /* CsvFileTypeManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		F8FE0A842726A2E900E1222D /* FileReadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReadManager.swift; sourceTree = "<group>"; };
 		F8FE0A862726A42B00E1222D /* CsvFileTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvFileTypeManager.swift; sourceTree = "<group>"; };
 		F8FE0A882726AA6600E1222D /* FileTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTypeManager.swift; sourceTree = "<group>"; };
+		F8FE0A8C27270E5300E1222D /* CsvFileTypeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvFileTypeManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				F881C056271EFB4B0053F9F2 /* Info.plist */,
 				F881C05C271EFB7C0053F9F2 /* IssueTests.swift */,
 				F8FE0A8227269CD500E1222D /* FileReadManagerTests.swift */,
+				F8FE0A8C27270E5300E1222D /* CsvFileTypeManagerTests.swift */,
 			);
 			path = issuesTests;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			files = (
 				F881C05D271EFB7C0053F9F2 /* IssueTests.swift in Sources */,
 				F8FE0A8327269CD500E1222D /* FileReadManagerTests.swift in Sources */,
+				F8FE0A8D27270E5300E1222D /* CsvFileTypeManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

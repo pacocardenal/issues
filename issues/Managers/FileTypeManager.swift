@@ -9,6 +9,6 @@ import Foundation
 
 protocol FileTypeManager {
   
-  func read(filePath: String) throws -> [Issue]
+  func read(content: String) -> [Issue]
   
 }

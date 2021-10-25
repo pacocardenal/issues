@@ -20,7 +20,8 @@ final class FileIssuesManager: IssuesManager {
       return
     }
     do {
-      let issues = try fileTypeManager.read(filePath: filepath)
+      let content = try FileReadManager.shared.readData(from: filepath)
+      let issues = fileTypeManager.read(content: content)
       completed(.success(sort(issues)))
     } catch {
       completed(.failure(.invalidData))
