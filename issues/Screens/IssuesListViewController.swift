@@ -46,7 +46,7 @@ final class IssuesListViewController: ISDataLoadingViewController {
   
   // MARK: - Private methods
   private func setupBinding() {
-    issuesListViewModel = IssuesListViewModel(withManager: FileIssuesManager.shared)
+    issuesListViewModel = IssuesListViewModel(withManager: FileIssuesManager.shared, fileTypeManager: CsvFileTypeManager.shared)
     issuesListViewModel.bindIssuesListViewModelToController = {
       self.dismissLoadingView()
       self.updateUI(with: self.issuesListViewModel.isssuesList)

@@ -9,6 +9,7 @@ import Foundation
 
 protocol IssuesManager {
   
-  func getIssues(completed: @escaping(Result<[Issue], ISError>) -> Void)
+  func getIssues(withFileTypeManager fileTypeManager: FileTypeManager,
+                 completed: @escaping(Result<[Issue], ISError>) -> Void)
 
 }

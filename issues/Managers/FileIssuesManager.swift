@@ -13,13 +13,14 @@ final class FileIssuesManager: IssuesManager {
   static let shared = FileIssuesManager()
   
   // MARK: - Internal methods
-  func getIssues(completed: @escaping(Result<[Issue], ISError>) -> Void) {
+  func getIssues(withFileTypeManager fileTypeManager: FileTypeManager,
+                 completed: @escaping(Result<[Issue], ISError>) -> Void) {
     guard let filepath = Bundle.main.path(forResource: SourceFile.fileName, ofType: SourceFile.fileExtension) else {
       completed(.failure(.invalidFile))
       return
     }
     do {
-      let issues = try CsvFileTypeManager.shared.read(filePath: filepath)
+      let issues = try fileTypeManager.read(filePath: filepath)
       completed(.success(sort(issues)))
     } catch {
       completed(.failure(.invalidData))

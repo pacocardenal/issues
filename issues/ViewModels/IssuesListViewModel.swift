@@ -11,6 +11,7 @@ final class IssuesListViewModel {
   
   // MARK: - Properties
   private var manager: IssuesManager!
+  private var fileTypeManager: FileTypeManager!
   private (set) var isssuesList = [Issue]() {
     didSet {
       bindIssuesListViewModelToController()
@@ -25,9 +26,10 @@ final class IssuesListViewModel {
   var bindErrorMessageIssuesListViewModelToController: (() -> ()) = {}
   
   // MARK: - Initializers
-  convenience init(withManager manager: IssuesManager) {
+  convenience init(withManager manager: IssuesManager, fileTypeManager: FileTypeManager) {
     self.init()
     self.manager = manager
+    self.fileTypeManager = fileTypeManager
   }
   
   // MARK: - Internal methods
@@ -37,7 +39,7 @@ final class IssuesListViewModel {
   
   // MARK: - Private methods
   private func getIssues() {
-    manager.getIssues { [weak self] result in
+    manager.getIssues(withFileTypeManager: fileTypeManager) { [weak self] result in
       guard let self = self else {
         self?.errorMessage = ISError.unknown.rawValue
         return
