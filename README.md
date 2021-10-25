@@ -160,3 +160,9 @@ The result should be delivered as a link or email attachment
 
 ### Refactor #6
 > Managers
+
+### Added managers
+> File type manager on view model injection
+
+### File read manager tests
+> Tests for the read manager class

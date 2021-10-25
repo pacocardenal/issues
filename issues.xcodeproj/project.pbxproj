@@ -35,7 +35,7 @@
 		F8E183E9272161B40007A423 /* IssuesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E183E8272161B40007A423 /* IssuesListViewModel.swift */; };
 		F8E183EB272162C30007A423 /* IssuesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E183EA272162C30007A423 /* IssuesManager.swift */; };
 		F8E183ED27217A6E0007A423 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F8E183EC27217A6E0007A423 /* README.md */; };
-		F8FE0A8327269CD500E1222D /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A8227269CD500E1222D /* FileManagerTests.swift */; };
+		F8FE0A8327269CD500E1222D /* FileReadManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A8227269CD500E1222D /* FileReadManagerTests.swift */; };
 		F8FE0A852726A2E900E1222D /* FileReadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A842726A2E900E1222D /* FileReadManager.swift */; };
 		F8FE0A872726A42B00E1222D /* CsvFileTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A862726A42B00E1222D /* CsvFileTypeManager.swift */; };
 		F8FE0A892726AA6600E1222D /* FileTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A882726AA6600E1222D /* FileTypeManager.swift */; };
@@ -84,7 +84,7 @@
 		F8E183E8272161B40007A423 /* IssuesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesListViewModel.swift; sourceTree = "<group>"; };
 		F8E183EA272162C30007A423 /* IssuesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesManager.swift; sourceTree = "<group>"; };
 		F8E183EC27217A6E0007A423 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F8FE0A8227269CD500E1222D /* FileManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerTests.swift; sourceTree = "<group>"; };
+		F8FE0A8227269CD500E1222D /* FileReadManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReadManagerTests.swift; sourceTree = "<group>"; };
 		F8FE0A842726A2E900E1222D /* FileReadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReadManager.swift; sourceTree = "<group>"; };
 		F8FE0A862726A42B00E1222D /* CsvFileTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvFileTypeManager.swift; sourceTree = "<group>"; };
 		F8FE0A882726AA6600E1222D /* FileTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTypeManager.swift; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 			children = (
 				F881C056271EFB4B0053F9F2 /* Info.plist */,
 				F881C05C271EFB7C0053F9F2 /* IssueTests.swift */,
-				F8FE0A8227269CD500E1222D /* FileManagerTests.swift */,
+				F8FE0A8227269CD500E1222D /* FileReadManagerTests.swift */,
 			);
 			path = issuesTests;
 			sourceTree = "<group>";
@@ -422,7 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F881C05D271EFB7C0053F9F2 /* IssueTests.swift in Sources */,
-				F8FE0A8327269CD500E1222D /* FileManagerTests.swift in Sources */,
+				F8FE0A8327269CD500E1222D /* FileReadManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
