@@ -157,3 +157,6 @@ The result should be delivered as a link or email attachment
 * Convenience init on model extension
 * Extract file manager data read
 * Add cell layout constants
+
+### Refactor #6
+> Managers

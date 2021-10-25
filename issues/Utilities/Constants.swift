@@ -11,3 +11,8 @@ enum SFSymbols {
   static let issuePlaceholder = UIImage(systemName: "ant.circle")
   static let issueListEmptyView = UIImage(systemName: "exclamationmark.triangle")
 }
+
+enum SourceFile {
+  static let fileName = "issues"
+  static let fileExtension = "csv"
+}

@@ -18,7 +18,7 @@
 		F8361DF62716D2590067D3CF /* ISAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DF52716D2590067D3CF /* ISAlertViewController.swift */; };
 		F8361DF82716D2E00067D3CF /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DF72716D2E00067D3CF /* UIViewController+Ext.swift */; };
 		F8361DFF2716D4B80067D3CF /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DFE2716D4B80067D3CF /* Issue.swift */; };
-		F8361E022716D6CE0067D3CF /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E012716D6CE0067D3CF /* FileManager.swift */; };
+		F8361E022716D6CE0067D3CF /* FileIssuesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E012716D6CE0067D3CF /* FileIssuesManager.swift */; };
 		F8361E052716D7340067D3CF /* ISError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E042716D7340067D3CF /* ISError.swift */; };
 		F8361E0727171EFF0067D3CF /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = F8361E0627171EFF0067D3CF /* issues.csv */; };
 		F8361E09271731B80067D3CF /* ISIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361E08271731B80067D3CF /* ISIconImageView.swift */; };
@@ -35,6 +35,10 @@
 		F8E183E9272161B40007A423 /* IssuesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E183E8272161B40007A423 /* IssuesListViewModel.swift */; };
 		F8E183EB272162C30007A423 /* IssuesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E183EA272162C30007A423 /* IssuesManager.swift */; };
 		F8E183ED27217A6E0007A423 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F8E183EC27217A6E0007A423 /* README.md */; };
+		F8FE0A8327269CD500E1222D /* FileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A8227269CD500E1222D /* FileManagerTests.swift */; };
+		F8FE0A852726A2E900E1222D /* FileReadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A842726A2E900E1222D /* FileReadManager.swift */; };
+		F8FE0A872726A42B00E1222D /* CsvFileTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A862726A42B00E1222D /* CsvFileTypeManager.swift */; };
+		F8FE0A892726AA6600E1222D /* FileTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE0A882726AA6600E1222D /* FileTypeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +65,7 @@
 		F8361DF52716D2590067D3CF /* ISAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISAlertViewController.swift; sourceTree = "<group>"; };
 		F8361DF72716D2E00067D3CF /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		F8361DFE2716D4B80067D3CF /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
-		F8361E012716D6CE0067D3CF /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		F8361E012716D6CE0067D3CF /* FileIssuesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIssuesManager.swift; sourceTree = "<group>"; };
 		F8361E042716D7340067D3CF /* ISError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISError.swift; sourceTree = "<group>"; };
 		F8361E0627171EFF0067D3CF /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
 		F8361E08271731B80067D3CF /* ISIconImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISIconImageView.swift; sourceTree = "<group>"; };
@@ -80,6 +84,10 @@
 		F8E183E8272161B40007A423 /* IssuesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesListViewModel.swift; sourceTree = "<group>"; };
 		F8E183EA272162C30007A423 /* IssuesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesManager.swift; sourceTree = "<group>"; };
 		F8E183EC27217A6E0007A423 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F8FE0A8227269CD500E1222D /* FileManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerTests.swift; sourceTree = "<group>"; };
+		F8FE0A842726A2E900E1222D /* FileReadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReadManager.swift; sourceTree = "<group>"; };
+		F8FE0A862726A42B00E1222D /* CsvFileTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvFileTypeManager.swift; sourceTree = "<group>"; };
+		F8FE0A882726AA6600E1222D /* FileTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTypeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +199,10 @@
 			isa = PBXGroup;
 			children = (
 				F8E183EA272162C30007A423 /* IssuesManager.swift */,
-				F8361E012716D6CE0067D3CF /* FileManager.swift */,
+				F8361E012716D6CE0067D3CF /* FileIssuesManager.swift */,
+				F8FE0A882726AA6600E1222D /* FileTypeManager.swift */,
+				F8FE0A862726A42B00E1222D /* CsvFileTypeManager.swift */,
+				F8FE0A842726A2E900E1222D /* FileReadManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -219,6 +230,7 @@
 			children = (
 				F881C056271EFB4B0053F9F2 /* Info.plist */,
 				F881C05C271EFB7C0053F9F2 /* IssueTests.swift */,
+				F8FE0A8227269CD500E1222D /* FileManagerTests.swift */,
 			);
 			path = issuesTests;
 			sourceTree = "<group>";
@@ -378,7 +390,9 @@
 			files = (
 				F8361E052716D7340067D3CF /* ISError.swift in Sources */,
 				F8361DF62716D2590067D3CF /* ISAlertViewController.swift in Sources */,
+				F8FE0A872726A42B00E1222D /* CsvFileTypeManager.swift in Sources */,
 				F8361DF22716D1FA0067D3CF /* ISButton.swift in Sources */,
+				F8FE0A852726A2E900E1222D /* FileReadManager.swift in Sources */,
 				F8361E09271731B80067D3CF /* ISIconImageView.swift in Sources */,
 				F8361DE02716CB6E0067D3CF /* IssuesListViewController.swift in Sources */,
 				F8361DDC2716CB6E0067D3CF /* AppDelegate.swift in Sources */,
@@ -387,7 +401,7 @@
 				F8D217DE27184B980007F07D /* Constants.swift in Sources */,
 				F881C049271D7E0B0053F9F2 /* ISAlertContainerView.swift in Sources */,
 				F8E183E9272161B40007A423 /* IssuesListViewModel.swift in Sources */,
-				F8361E022716D6CE0067D3CF /* FileManager.swift in Sources */,
+				F8361E022716D6CE0067D3CF /* FileIssuesManager.swift in Sources */,
 				F8361DF02716D1BA0067D3CF /* ISBodyLabel.swift in Sources */,
 				F8361DF82716D2E00067D3CF /* UIViewController+Ext.swift in Sources */,
 				F8361E0C271732D30067D3CF /* IssueCell.swift in Sources */,
@@ -399,6 +413,7 @@
 				F8361DFF2716D4B80067D3CF /* Issue.swift in Sources */,
 				F8D217D5271845470007F07D /* UIHelper.swift in Sources */,
 				F874815C27200BEC00D740FF /* Date+Ext.swift in Sources */,
+				F8FE0A892726AA6600E1222D /* FileTypeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F881C05D271EFB7C0053F9F2 /* IssueTests.swift in Sources */,
+				F8FE0A8327269CD500E1222D /* FileManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
