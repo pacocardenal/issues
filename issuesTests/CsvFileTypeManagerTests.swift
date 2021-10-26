@@ -9,8 +9,8 @@ import XCTest
 @testable import issues
 
 class CsvFileTypeManagerTests: XCTestCase {
-
-  private var sut: CsvFileTypeManager!
+  
+  // MARK: - Enums
   private enum Constants {
     static let fileContentOK = """
       \"First name\",\"Sur name\",\"Issue count\",\"Date of birth\"\r\n\"Theo\",\"Jansen\",5,\"1978-01-02T00:00:00\"\r\n\"Fiona\",\"de Vries\",7,\"1950-11-12T00:00:00\"\r\n\"Petra\",\"Boersma\",1,\"2001-04-20T00:00:00\"
@@ -25,6 +25,10 @@ class CsvFileTypeManagerTests: XCTestCase {
                          Issue(firstName: "Petra", lastName: "Boersma", issuesCount: 1, dateOfBirth: "2001-04-20T00:00:00")]
   }
   
+  // MARK: - Properties
+  private var sut: CsvFileTypeManager!
+  
+  // MARK: - Setup
   override func setUpWithError() throws {
     try super.setUpWithError()
     sut = CsvFileTypeManager.shared
@@ -35,6 +39,7 @@ class CsvFileTypeManagerTests: XCTestCase {
     try super.tearDownWithError()
   }
   
+  // MARK: - Tests
   func testCsvFileTypeManagerIsNotNil() {
     XCTAssertNotNil(sut)
   }
@@ -51,7 +56,7 @@ class CsvFileTypeManagerTests: XCTestCase {
       XCTAssertEqual(issues[index], Constants.issues[index])
     }
   }
-
+  
   func testReadEmptyCsvFileContent_isEqualToEmptyIssuesContent() {
     let issues = sut.read(content: Constants.fileContentEmpty)
     XCTAssertEqual(issues, [Issue]())

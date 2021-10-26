@@ -169,3 +169,6 @@ The result should be delivered as a link or email attachment
 
 ### CSV file manager tests
 > Tests for the CSV file manager class
+
+### File issues manager tests
+> Tests for the file issues manager class

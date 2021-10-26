@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CCEB63027282F4E00FD3C2D /* MockFileTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEB62F27282F4E00FD3C2D /* MockFileTypeManager.swift */; };
+		5CCEB6322728302500FD3C2D /* FileIssuesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEB6312728302500FD3C2D /* FileIssuesManagerTests.swift */; };
 		F8361DDC2716CB6E0067D3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DDB2716CB6E0067D3CF /* AppDelegate.swift */; };
 		F8361DDE2716CB6E0067D3CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DDD2716CB6E0067D3CF /* SceneDelegate.swift */; };
 		F8361DE02716CB6E0067D3CF /* IssuesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DDF2716CB6E0067D3CF /* IssuesListViewController.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CCEB62F27282F4E00FD3C2D /* MockFileTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFileTypeManager.swift; sourceTree = "<group>"; };
+		5CCEB6312728302500FD3C2D /* FileIssuesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIssuesManagerTests.swift; sourceTree = "<group>"; };
 		F8361DD82716CB6E0067D3CF /* issues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = issues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8361DDB2716CB6E0067D3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8361DDD2716CB6E0067D3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 				F881C05C271EFB7C0053F9F2 /* IssueTests.swift */,
 				F8FE0A8227269CD500E1222D /* FileReadManagerTests.swift */,
 				F8FE0A8C27270E5300E1222D /* CsvFileTypeManagerTests.swift */,
+				5CCEB6312728302500FD3C2D /* FileIssuesManagerTests.swift */,
+				5CCEB62F27282F4E00FD3C2D /* MockFileTypeManager.swift */,
 			);
 			path = issuesTests;
 			sourceTree = "<group>";
@@ -425,8 +431,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F881C05D271EFB7C0053F9F2 /* IssueTests.swift in Sources */,
+				5CCEB63027282F4E00FD3C2D /* MockFileTypeManager.swift in Sources */,
 				F8FE0A8327269CD500E1222D /* FileReadManagerTests.swift in Sources */,
 				F8FE0A8D27270E5300E1222D /* CsvFileTypeManagerTests.swift in Sources */,
+				5CCEB6322728302500FD3C2D /* FileIssuesManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

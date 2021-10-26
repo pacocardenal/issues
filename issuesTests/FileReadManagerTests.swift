@@ -10,6 +10,7 @@ import XCTest
 
 class FileReadManagerTests: XCTestCase {
   
+  // MARK: - Enums
   private enum Constants {
     static let fileContentOK = """
       \"First name\",\"Sur name\",\"Issue count\",\"Date of birth\"\r\n\"Theo\",\"Jansen\",5,\"1978-01-02T00:00:00\"\r\n\"Fiona\",\"de Vries\",7,\"1950-11-12T00:00:00\"\r\n\"Petra\",\"Boersma\",1,\"2001-04-20T00:00:00\"
@@ -17,8 +18,10 @@ class FileReadManagerTests: XCTestCase {
     static let fileContentEmpty = ""
   }
   
+  // MARK: - Properties
   private var sut: FileReadManager!
   
+  // MARK: - Setup
   override func setUpWithError() throws {
     try super.setUpWithError()
     sut = FileReadManager.shared
@@ -29,6 +32,7 @@ class FileReadManagerTests: XCTestCase {
     try super.tearDownWithError()
   }
   
+  // MARK: - Tests
   func testFileManagerIsNotNil() {
     XCTAssertNotNil(sut)
   }
