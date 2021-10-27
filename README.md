@@ -172,3 +172,6 @@ The result should be delivered as a link or email attachment
 
 ### File issues manager tests
 > Tests for the file issues manager class
+
+### UI tests configuration
+> Bundle and scheme configuration for UI tests
