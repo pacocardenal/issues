@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		5CCEB63027282F4E00FD3C2D /* MockFileTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEB62F27282F4E00FD3C2D /* MockFileTypeManager.swift */; };
 		5CCEB6322728302500FD3C2D /* FileIssuesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEB6312728302500FD3C2D /* FileIssuesManagerTests.swift */; };
-		5CCEB63A2728444300FD3C2D /* issuesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEB6392728444300FD3C2D /* issuesUITests.swift */; };
+		5CCEB63A2728444300FD3C2D /* SearchFieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEB6392728444300FD3C2D /* SearchFieldUITests.swift */; };
+		5CEF08D02729994400E35CE0 /* IssuesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF08CF2729994400E35CE0 /* IssuesUITests.swift */; };
+		5CEF08D22729A16D00E35CE0 /* CollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEF08D12729A16D00E35CE0 /* CollectionViewUITests.swift */; };
 		F8361DDC2716CB6E0067D3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DDB2716CB6E0067D3CF /* AppDelegate.swift */; };
 		F8361DDE2716CB6E0067D3CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DDD2716CB6E0067D3CF /* SceneDelegate.swift */; };
 		F8361DE02716CB6E0067D3CF /* IssuesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8361DDF2716CB6E0067D3CF /* IssuesListViewController.swift */; };
@@ -66,8 +68,10 @@
 		5CCEB62F27282F4E00FD3C2D /* MockFileTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFileTypeManager.swift; sourceTree = "<group>"; };
 		5CCEB6312728302500FD3C2D /* FileIssuesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIssuesManagerTests.swift; sourceTree = "<group>"; };
 		5CCEB6372728444300FD3C2D /* issuesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = issuesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CCEB6392728444300FD3C2D /* issuesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = issuesUITests.swift; sourceTree = "<group>"; };
+		5CCEB6392728444300FD3C2D /* SearchFieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldUITests.swift; sourceTree = "<group>"; };
 		5CCEB63B2728444300FD3C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CEF08CF2729994400E35CE0 /* IssuesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesUITests.swift; sourceTree = "<group>"; };
+		5CEF08D12729A16D00E35CE0 /* CollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewUITests.swift; sourceTree = "<group>"; };
 		F8361DD82716CB6E0067D3CF /* issues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = issues.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8361DDB2716CB6E0067D3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8361DDD2716CB6E0067D3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,7 +139,9 @@
 		5CCEB6382728444300FD3C2D /* issuesUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5CCEB6392728444300FD3C2D /* issuesUITests.swift */,
+				5CEF08CF2729994400E35CE0 /* IssuesUITests.swift */,
+				5CCEB6392728444300FD3C2D /* SearchFieldUITests.swift */,
+				5CEF08D12729A16D00E35CE0 /* CollectionViewUITests.swift */,
 				5CCEB63B2728444300FD3C2D /* Info.plist */,
 			);
 			path = issuesUITests;
@@ -456,7 +462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CCEB63A2728444300FD3C2D /* issuesUITests.swift in Sources */,
+				5CEF08D22729A16D00E35CE0 /* CollectionViewUITests.swift in Sources */,
+				5CCEB63A2728444300FD3C2D /* SearchFieldUITests.swift in Sources */,
+				5CEF08D02729994400E35CE0 /* IssuesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

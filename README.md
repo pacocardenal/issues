@@ -175,3 +175,6 @@ The result should be delivered as a link or email attachment
 
 ### UI tests configuration
 > Bundle and scheme configuration for UI tests
+
+### UI tests
+> UI tests for App and UI elements
