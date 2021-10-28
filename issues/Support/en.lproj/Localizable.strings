@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  issues
+
+  Created by Paco Cardenal on 28/10/21.
+  
+*/
+
+"issuesList.screen.searchControllerPlaceholder" = "Search";
+"issuesList.screen.getIssuesFailureTitle" = "Bad Stuff Happened";
+"issuesList.screen.getIssuesFailureButtonTitle" = "Ok";
+"issuesList.screen.noIssuesMessage" = "The datasource doesn't have any issues 🥲";
+"issuesError.util.invalidFile" = "Unable to load data from file. Please check the file name.";
+"issuesError.util.invalidData" = "The data loaded from file was invalid. Please try again.";
+"issuesError.util.unknown" = "Unknown error. Please try again.";

@@ -178,3 +178,6 @@ The result should be delivered as a link or email attachment
 
 ### UI tests
 > UI tests for App and UI elements
+
+### Localization
+> Added localization file (english only) and extensions

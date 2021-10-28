@@ -10,10 +10,10 @@ import UIKit
 final class IssuesListViewController: ISDataLoadingViewController {
   
   private enum Constants {
-    static let searchControllerPlaceholder = "Search"
-    static let getIssuesFailureTitle = "Bad Stuff Happened"
-    static let getIssuesFailureButtonTitle = "Ok"
-    static let noIssuesMessage = "The datasource doesn't have any issues 🥲"
+    static let searchControllerPlaceholder = "issuesList.screen.searchControllerPlaceholder"
+    static let getIssuesFailureTitle = "issuesList.screen.getIssuesFailureTitle"
+    static let getIssuesFailureButtonTitle = "issuesList.screen.getIssuesFailureButtonTitle"
+    static let noIssuesMessage = "issuesList.screen.noIssuesMessage"
   }
   
   // MARK: - Enums
@@ -53,7 +53,7 @@ final class IssuesListViewController: ISDataLoadingViewController {
     }
     issuesListViewModel.bindErrorMessageIssuesListViewModelToController = {
       self.dismissLoadingView()
-      self.presentISAlertOnMainThread(title: Constants.getIssuesFailureTitle, message: self.issuesListViewModel.errorMessage, buttonTitle: Constants.getIssuesFailureButtonTitle)
+      self.presentISAlertOnMainThread(title: Constants.getIssuesFailureTitle.localized, message: self.issuesListViewModel.errorMessage, buttonTitle: Constants.getIssuesFailureButtonTitle.localized)
     }
   }
   
@@ -73,7 +73,7 @@ final class IssuesListViewController: ISDataLoadingViewController {
     let searchController = UISearchController()
     searchController.searchBar.delegate = self
     searchController.searchResultsUpdater = self
-    searchController.searchBar.placeholder = Constants.searchControllerPlaceholder
+    searchController.searchBar.placeholder = Constants.searchControllerPlaceholder.localized
     searchController.obscuresBackgroundDuringPresentation = false
     navigationItem.searchController = searchController
   }
@@ -111,7 +111,7 @@ final class IssuesListViewController: ISDataLoadingViewController {
   private func updateUI(with issues: [Issue]) {
     self.issues = issues
     if self.issues.isEmpty {
-      let message = Constants.noIssuesMessage
+      let message = Constants.noIssuesMessage.localized
       DispatchQueue.main.async {
         self.showEmptyState(with: message, in: self.view)
       }

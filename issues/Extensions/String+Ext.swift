@@ -9,6 +9,10 @@ import Foundation
 
 extension String {
   
+  var localized: String {
+    NSLocalizedString(self, comment: " ")
+  }
+  
   func convertToDate() -> Date? {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"

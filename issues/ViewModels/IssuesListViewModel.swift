@@ -41,7 +41,7 @@ final class IssuesListViewModel {
   private func getIssues() {
     manager.getIssues(withFileTypeManager: fileTypeManager) { [weak self] result in
       guard let self = self else {
-        self?.errorMessage = ISError.unknown.rawValue
+        self?.errorMessage = ISError.unknown.rawValue.localized
         return
       }
       
@@ -49,7 +49,7 @@ final class IssuesListViewModel {
       case .success(let issues):
         self.isssuesList.append(contentsOf: issues)
       case .failure(let error):
-        self.errorMessage = error.rawValue
+        self.errorMessage = error.rawValue.localized
       }
     }
   }
