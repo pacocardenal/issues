@@ -1,4 +1,4 @@
-# Rabobank Assignment for Team Native
+# Assignment for Team Native
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![IDE: Xcode](https://img.shields.io/badge/IDE-Xcode%2012.5-blue.svg)](https://developer.apple.com/xcode/)
 [![Language: Swift](https://img.shields.io/badge/Language-Swift-red.svg)](https://swift.org/blog/)
